@@ -1,0 +1,129 @@
+body {
+	font-size: 16px;
+	font-family: "Roboto", Arial, sans-serif;
+	line-height: 22px;
+	color: #ffffff;
+	background-color: #849d8f; /*Задал начальный фон, чтобы видеть белый текст*/
+	
+}
+
+li {
+	list-style: none;
+}
+
+.main_menu {
+	line-height: 18px;
+}
+
+.sub_menu {
+	font-size: 14px;
+	line-height: 16px;
+}
+
+.sub_menu li:first-child {
+	font-weight: bold;
+}
+
+.sub_menu a {
+	color: #323232;
+}
+
+.btn_enter a {
+	font-size: 13px;
+	line-height: 24px;
+	color: #323232;
+}
+
+.schedule {
+	font-size: 14px;
+	font-weight: bold;
+	line-height: 16px;
+}
+
+.phone {
+	font-size: 22px;
+	font-weight: bold;
+	line-height: 24px;
+}
+
+.sliders h2 {
+	font-size: 60px;
+	font-weight: bold;
+	line-height: 60.35px;
+}
+
+.introduction,
+.blog_news,
+.location {
+	color: #323232;
+}
+
+.blog_news a {
+	font-size: 24px;
+	font-weight: bold;
+	line-height: 30px;
+	text-decoration: underline;
+	color: #323232;
+
+}
+
+.introduction h1 {
+	font-size: 24px;
+	font-weight: medium;
+	line-height: 30px;
+}
+
+.emailing_news {
+	color: #5a5a5a;
+}
+
+.promo_title {
+	font-size: 35px;
+	font-weight: bold;
+	line-height: 41px;
+}
+
+.promo_left,
+.promo_right {
+	font-size: 18px;
+}
+
+.price {
+	font-size: 45px;
+	font-weight: bold;
+}
+
+.product_item a {
+	text-decoration: none;
+}
+
+.location_info {
+	font-size: 14px;
+	line-height: 20px;
+}
+
+.location_info p {
+	font-size: 18px;
+	font-weight: bold;
+	line-height: 24px;
+}
+
+.footer_links {
+	font-size: 13px;
+	line-height: 18px;
+}
+
+.footer_links li:first-child {
+	font-weight: bold;
+}
+
+h2 {
+	font-size: 35px;
+	font-weight: bold;
+	line-height: 41px;
+}
+
+a {
+	color: #ffffff;
+	text-decoration: underline;
+}

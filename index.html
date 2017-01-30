@@ -22,7 +22,7 @@
 					<nav class="main_menu">
 
 						<ul>
-							<li class="main_logo"><img src="img/main_logo.png" alt="Логотип"></li>
+							<li class="main_logo"><img src="img/main_logo.png" width="154" height="64" alt="Логотип"></li>
 							<li><a href="#">Каталог</a>
 								<ul class="sub_menu">
 									<li><a href="#">Новинки</a></li>
@@ -47,7 +47,7 @@
 						</div>
 
 						<div class="btn_enter">
-							<p>Вход</p>
+							<a href="#">Вход</a>
 							<form class="user_login" action="https://echo.htmlacademy.ru" name="form_login" method="post">
 								<input type="email" name="email" value="" placeholder="Электронная почта" required>
 								<input type="password" name="password" value="" placeholder="Пароль" required>
@@ -83,20 +83,20 @@
 			<div class="container">
 
 				<div class="sliders">
-
+					<!-- Задал h3 вместо h2, а h2 прописал в .promo (113,119 строки), т.к. fz и lh заголовка совпадают c заголовком "Сливочное мороженое в catalog.html (94 строка)"  -->
 					<div class="slide" id="first_slide">
 						<h2>Крем-брюле и пломбир с малиновым джемом</h2>
-						<a class="btn_slide" href="#">Дайте два</a>
+						<a class="btn_slide" href="#">Давайте оба!</a>
 					</div>
 
 					<div class="slide" id="second_slide">
 						<h2>Шоколадный пломбир и лимонный сорбет</h2>
-						<a class="btn_slide" href="#">Дайте два</a>
+						<a class="btn_slide" href="#">Давайте оба!</a>
 					</div>
 
 					<div class="slide" id="third_slide">
 						<h2>Пломбир с помадкой и клубничный щербет</h2>
-						<a class="btn_slide" href="#">Дайте два</a>
+						<a class="btn_slide" href="#">Давайте оба!</a>
 					</div>
 
 					<div class="slide_switch">
@@ -110,7 +110,7 @@
 				<div class="promo_wrapper">
 
 					<div class="promo promo_left">
-						<p class="promo_title">Малинка даром!</b>
+						<p class="promo_title">Малинка даром!</p>
 						<p>При покупке 2 кг любого фруктового мороженного, добавим в ваш заказ банку малинового варенья бесплатно</p>
 						<a class="btn" href="#">Хочу варенье!</a>
 					</div>
@@ -126,10 +126,10 @@
 				<section class="products">
 
 					<article class="product_item product_hit">
-						<a href="">
+						<a href="#">
 							<img src="img/catalog_item_1.png" width="267" height="267" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой">
-							<p class="price">310<span class="rouble"> р</span>/кг</p>
-							<p>Сливочное с апельсиновым джемом и цитрусовой стружкой</p>
+							<p class="price">310<span class="rouble"> р</span><span class="kg">/кг</span></p>
+							<p class="product_title">Сливочное с апельсиновым джемом и цитрусовой стружкой</p>
 							<p class="btn">Быстрый просмотр</p>
 						</a>
 					</article>
@@ -137,8 +137,8 @@
 					<article class="product_item product_hit">
 						<a href="#">
 							<img src="img/catalog_item_2.png" width="267" height="267" alt="Сливочно-кофейное с кусочками шоколада">
-							<p class="price">380<span class="rouble"> р</span>/кг</p>
-							<p>Сливочно-кофейное с кусочками шоколада</p>
+							<p class="price">380<span class="rouble"> р</span><span class="kg">/кг</span></p>
+							<p class="product_title">Сливочно-кофейное с кусочками шоколада</p>
 							<p class="btn">Быстрый просмотр</p>
 						</a>
 					</article>
@@ -146,8 +146,8 @@
 					<article class="product_item product_hit">
 						<a href="#">
 							<img src="img/catalog_item_3.png" width="267" height="267" alt="Сливочно-клубничное с присыпкой из белого шоколада">
-							<p class="price">355<span class="rouble"> р</span>/кг</p>
-							<p>Сливочно-клубничное с присыпкой из белого шоколада</p>
+							<p class="price">355<span class="rouble"> р</span><span class="kg">/кг</span></p>
+							<p class="product_title">Сливочно-клубничное с присыпкой из белого шоколада</p>
 							<p class="btn">Быстрый просмотр</p>
 						</a>
 					</article>
@@ -155,8 +155,8 @@
 					<article class="product_item product_hit">
 						<a href="#">
 							<img src="img/catalog_item_4.png" width="267" height="267" alt="Сливочное Крем-брюле с карамельной подливкой">
-							<p class="price">415<span class="rouble"> р</span>/кг</p>
-							<p>Сливочное Крем-брюле с карамельной подливкой</p>
+							<p class="price">415<span class="rouble"> р</span><span class="kg">/кг</span></p>
+							<p class="product_title">Сливочное Крем-брюле с карамельной подливкой</p>
 							<p class="btn">Быстрый просмотр</p>
 						</a>
 					</article>
@@ -200,16 +200,18 @@
 				<section class="news">
 
 					<div class="blog_news">
-						<p>Новости в нашем блоге</p>
+						<p>Новое в нашем блоге</p>
 						<a href="#">10 способов сервировки фруктовых щербетов к столу</a>
 					</div>
 
 					<div class="emailing_news">
-						<p>Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)</p>
-						<form action="https://echo.htmlacademy.ru" name="email_subscribe">
-							<input type="email" name="email" placeholder="Электронная почта">
-							<button class="btn" type="submit">Отправить</button>
-						</form>
+						<div class="emailing_news_wrapper">
+							<p>Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)</p>
+							<form action="https://echo.htmlacademy.ru" name="email_subscribe">
+								<input type="email" name="email" placeholder="Электронная почта">
+								<button class="btn" type="submit">Отправить</button>
+							</form>
+						</div>
 					</div>
 
 				</section>
@@ -220,10 +222,10 @@
 
 				<div class="location_info">
 					<span>Адрес главного офиса<br>и офлайн магазина:</span>
-					<p>ул. Большая Конюшенная 19/8,<br>Санкт-Петербург</p>
+					<p class="address">ул. Большая Конюшенная 19/8,<br>Санкт-Петербург</p>
 					<span>Для заказов по телефону:</span>
-					<p>8 812 450-25-25</p>
-					<span>(с 10 до 20 ежедневно)</span>
+					<p class="location_phone">8 812 450-25-25</p>
+					<span class="location_shedule">(с 10 до 20 ежедневно)</span>
 					<input class="btn" type="button" name="btn_feedback" value="Форма обратной связи">
 				</div>
 
@@ -263,7 +265,7 @@
 				</section>
 
 				<section class="footer_copyright">
-					<a href="https://htmlacademy.ru"><img src="img/academy_logo.png" alt="HTML Академия"></a>
+					<a href="https://htmlacademy.ru"><img src="img/academy_logo.png" width="108" height="38" alt="HTML Академия"></a>
 					<span>Сделано в <a href="https://htmlacademy.ru">HTML Academy</a> &#169; 2017</span>
 				</section>
 

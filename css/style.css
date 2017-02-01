@@ -31,28 +31,89 @@
 
 /* Стили для глобальных тегов ( Д.25: допускается стилизовать теги html, body, a, img.) */
 body {
+	margin: 0;
 	font-size: 16px;
 	font-family: "RobotoBold", "Arial", sans-serif;
 	line-height: 22px;
 	color: #ffffff;
-	background-color: #849d8f;
+	background-color: #7d7c7c;
+	/*background-image: url("../../../psd/gllacy/gllacy/preview/gllacy-index-1200.jpg");*/
 }
 
 a {
-	color: #ffffff;
+	color: #fff;
+	text-decoration-color: rgba(255,255,255,0.3)
 }
 
 /* Стилизуем index.html */
 
-/* header*/
-
-/* Главное меню навигации */
-.main_menu {
-	line-height: 18px;
+/* Главная обёртка */
+.wrapper {
+	width: 1200px;
+	margin: 0 auto;
+	background-color: #849d8f;
 }
 
-/* Подменю при наведении на Каталог */
+.wrapper li {
+	list-style: none; /* Убрал маркер у всех li */
+}
+
+.wrapper ul {
+	padding: 0; /* Убрал отсутп в 40 px у всех ul */
+}
+
+/* Для центровщика */
+.container {
+	width: 1146px;
+	margin: 0 auto;
+}
+
+/* header*/
+
+.header_first_line {
+	display: flex;
+	justify-content: space-between;
+	height: 70px;
+}
+
+.header_second_line {
+	display: flex;
+	justify-content: space-between;
+	background-color: #dababa;
+}
+
+/* Главное меню навигации */
+/* Сделал флекс-контейнером ul внутри .main_menu, li-шки стали флекс-элементами */
+.main_menu > ul {
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	margin: 4px 0 4px 0;
+	padding: 0;
+}
+
+.main_menu {
+	width: 853px;
+	line-height: 18px;
+	background-color: #73898f;
+}
+
+.main_menu li {
+	margin-right: 20px;
+}
+
+.user_block {
+	display: flex;
+	justify-content: flex-end;
+	width: 293px;
+	background-color: #a7b4d4;
+	align-items: center;
+}
+
+/* Подменю при наведении на Каталог, скрыто */
+
 .sub_menu {
+	display: none;
 	font-family: "RobotoRegular", "Arial", sans-serif;
 	font-size: 14px;
 	line-height: 16px;
@@ -64,16 +125,26 @@ a {
 
 .sub_menu a {
 	color: #323232;
-	text-decoration: none;
 }
 
 /* Юзерблок Поиск, Вход и Корзина */
+
+/* Скрыл попапы*/
+.user_block form {
+	display: none;
+}
+
+.search,
+.btn_enter,
+.basket {
+	margin: 0 0 0 50px; /* Отступы флекс элементам Поиск, Вход, Корзина */
+}
+
 .btn_enter a,
 .basket a {
 	font-family: "RobotoMedium", "Arial", sans-serif;
 	font-size: 14px;
 	line-height: 16px;
-	text-decoration: none;
 }
 
 .user_login a {
@@ -85,18 +156,43 @@ a {
 }
 
 /* Контактная информация (блок contact_info) */
+.contact_info {
+	
+}
+
 .schedule {
+	margin: 0;
 	font-size: 14px;
 	line-height: 16px;
+	text-align: right;
 }
 
 .phone {
+	margin: 5px 0 0 0;
 	font-size: 22px;
 	line-height: 24px;
 }
 
 /* Стилизуем main */
 /* Блок со слайдерами */
+#second_slide,
+#third_slide {
+	display: none;
+}
+
+.sliders {
+	display: flex;
+	width: 700px;
+	height: 533px;
+	margin: 0 auto;
+	text-align: center;
+	background-color: #b9c5d1;
+}
+
+.slide {
+	padding: 250px 0 0 0;
+}
+
 .sliders h2 {
 	font-size: 60px;
 	line-height: 60.35px;
@@ -105,13 +201,33 @@ a {
 .sliders a {
 	font-size: 32px;
 	line-height: 44px;
-	text-decoration: none;
 }
 
 /* Промо блок под слайдерами */
 .promo_wrapper {
+	display: flex;
+	justify-content: space-around;
 	font-size: 18px;
 	line-height: 22px;
+	border: 1px dashed yellow;/* Обводка для себя */
+}
+
+.promo {
+		width: 540px;
+}
+
+.promo_left{
+		background-color: orange;
+}
+
+.promo_right{
+		background-color: blue;
+}
+
+.promo,
+.blog_news,
+.emailing_news {
+	padding: 0 20px 10px 20px;
 }
 
 .promo_title {
@@ -119,13 +235,30 @@ a {
 	line-height: 41px;
 }
 
+.promo a {
+	display: block;
+	text-align: right;
+}
+
 /* Карточки товаров */
-.product_item a {
-	text-decoration: none;
+.products {
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
+
+.products article {
+	width: 267px;
+}
+
+.product_item a,
+.product_item .btn {
+	text-align: center;
 }
 
 .product_title {
 	font-family: "Roboto Medium", "Arial", sans-serif;
+	text-align: center;
 }
 
 .price {
@@ -156,11 +289,27 @@ a {
 	line-height: 30px;
 }
 
+.introduction_wrapper ul { /* Alert - не доверстал */
+	display: flex;
+	justify-content: space-between;
+}
+
 .introduction_wrapper {
 	font-family: "RobotoRegular", "Arial", sans-serif;
 }
 
 /* Блок с новостями блога и email-подпиской */
+.news {
+	display: flex;
+
+}
+
+.blog_news,
+.emailing_news {
+	width: 560px;
+	border: 1px dashed red;
+}
+
 .blog_news p {
 	font-family: "RobotoMedium", "Arial", sans-serif;
 }
@@ -178,6 +327,21 @@ a {
 }
 
 /* Блок с картой*/
+.form_feedback {
+	display: none;
+}
+
+.location {
+	height: 430px;
+	background-color: grey;
+}
+
+.location_info {
+	width: 302px;
+	height: 305px;
+	border: 1px solid black;
+}
+
 .location_info span {
 	font-family: "RobotoRegular", "Arial", sans-serif;
 	font-size: 14px;
@@ -199,10 +363,23 @@ a {
 }
 
 /* Стилизуем подвал footer */
+.footer_wrapper  {
+	display: flex;
+	align-items: center;
+	height: 103px;
+}
+
+.footer_social {
+	width: 293px;
+	font-size: 13px;
+}
+
 .footer_links {
+	width: 663px;
 	font-family: "RobotoRegular", "Arial", sans-serif;
 	font-size: 13px;
 	line-height: 18px;
+	text-align: center;
 }
 
 .footer_links li:first-child {
@@ -210,14 +387,27 @@ a {
 }
 
 .footer_copyright {
+	width: 190px;
 	font-family: "RobotoRegular", "Arial", sans-serif;
 	font-size: 12px;
 	line-height: 18px;
 }
 
+.footer_copyright span { /* Для переноса "Сделано в ... */
+	display: block;
+}
+
 /* Стилизуем catalog.html */
 
 /* Хлебные крошки в header */
+.breadcrumbs ul {
+	display: flex;
+}
+
+.breadcrumbs li {
+	margin-right: 20px;
+}
+
 .breadcrumbs {
 	font-family: "RobotoRegular", "Arial", sans-serif;
 	font-size: 14px;

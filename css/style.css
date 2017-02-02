@@ -73,13 +73,11 @@ a {
 .header_first_line {
 	display: flex;
 	justify-content: space-between;
-	height: 70px;
 }
 
 .header_second_line {
 	display: flex;
-	justify-content: space-between;
-	background-color: #dababa;
+	justify-content: flex-end;
 }
 
 /* Главное меню навигации */
@@ -88,26 +86,28 @@ a {
 	display: flex;
 	justify-content: flex-start;
 	align-items: center;
-	margin: 4px 0 4px 0;
+	margin: 0;
 	padding: 0;
 }
 
 .main_menu {
 	width: 853px;
 	line-height: 18px;
-	background-color: #73898f;
 }
 
 .main_menu li {
 	margin-right: 20px;
 }
 
+.main_logo {
+	padding-top: 8px;
+}
+
 .user_block {
 	display: flex;
 	justify-content: flex-end;
-	width: 293px;
-	background-color: #a7b4d4;
 	align-items: center;
+	width: 293px;
 }
 
 /* Подменю при наведении на Каталог, скрыто */
@@ -157,7 +157,6 @@ a {
 
 /* Контактная информация (блок contact_info) */
 .contact_info {
-	
 }
 
 .schedule {
@@ -168,7 +167,8 @@ a {
 }
 
 .phone {
-	margin: 5px 0 0 0;
+	margin: 0;
+	/*margin: 5px 0 0 0;*/
 	font-size: 22px;
 	line-height: 24px;
 }
@@ -186,7 +186,6 @@ a {
 	height: 533px;
 	margin: 0 auto;
 	text-align: center;
-	background-color: #b9c5d1;
 }
 
 .slide {
@@ -206,22 +205,27 @@ a {
 /* Промо блок под слайдерами */
 .promo_wrapper {
 	display: flex;
-	justify-content: space-around;
+	justify-content: space-between;
+	height: 230px;
+	margin: 0 0 39px 0;
 	font-size: 18px;
 	line-height: 22px;
-	border: 1px dashed yellow;/* Обводка для себя */
 }
 
 .promo {
 		width: 540px;
+		border-radius: 19px;
 }
 
 .promo_left{
-		background-color: orange;
+		margin-right: 25px;
+		background-image: url("../img/raspberry_backgr.jpg");
+		background-repeat: no-repeat;
 }
 
 .promo_right{
-		background-color: blue;
+		background-image: url("../img/chocolate_backgr.jpg");
+		background-repeat: no-repeat;
 }
 
 .promo,
@@ -283,15 +287,35 @@ a {
 	color: #323232;
 }
 
+.introduction {
+	height: 308px;
+	margin: 0 0 40px 0;
+	border-radius: 19px;
+	background-image: url("../img/center_block_backgr.jpg");
+}
+
 .introduction h1 {
+	margin: 0;
+	padding: 20px 20px 0 20px;
 	font-family: "RobotoMedium", "Arial", sans-serif;
 	font-size: 24px;
 	line-height: 30px;
 }
 
-.introduction_wrapper ul { /* Alert - не доверстал */
+.introduction_wrapper ul {
 	display: flex;
-	justify-content: space-between;
+	margin-top: 0;
+}
+
+.introduction_wrapper li {
+	margin: 0 0 0 20px;
+	padding: 9px;
+	background: url("../img/icecream.png") no-repeat; 
+}
+
+.introduction_wrapper div {
+	width: 540px;
+	padding: 0 40px 0 50px;
 }
 
 .introduction_wrapper {
@@ -301,13 +325,29 @@ a {
 /* Блок с новостями блога и email-подпиской */
 .news {
 	display: flex;
+	justify-content: space-between;
+	height: 220px;
+	margin: 0 0 39px 0;
+}
 
+.blog_news {
+	width: 540px;
+	margin-right: 25px;
+	background-image: url("../img/strawberry_backgr.jpg");
+	background-repeat: no-repeat;
+	border-radius: 19px;
+}
+
+.emailing_news {
+	width: 540px;
+	background-image: url("../img/emailing.jpg");
+	background-repeat: no-repeat;
+	border-radius: 19px;
 }
 
 .blog_news,
 .emailing_news {
 	width: 560px;
-	border: 1px dashed red;
 }
 
 .blog_news p {
@@ -332,14 +372,20 @@ a {
 }
 
 .location {
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
 	height: 430px;
-	background-color: grey;
+	background-image: url("../img/map.jpg");
 }
 
 .location_info {
-	width: 302px;
-	height: 305px;
-	border: 1px solid black;
+	margin: 27px;
+	padding: 32px 25px 0 25px;
+	width: 277px;
+	height: 273px;
+	background-color: white;
+	border-radius: 19px;
 }
 
 .location_info span {
@@ -379,11 +425,22 @@ a {
 	font-family: "RobotoRegular", "Arial", sans-serif;
 	font-size: 13px;
 	line-height: 18px;
-	text-align: center;
+	/*text-align: center;*/
 }
 
-.footer_links li:first-child {
+.footer_links ul {
+	display: flex;
+	justify-content: center;
+
+}
+
+.footer_links div {
+	padding: 0 0 0 20px;
+}
+
+.footer_links_wrap li:first-child {
 	font-family: "RobotoBold", "Arial", sans-serif;
+	list-style-image: url("../img/heart.png")
 }
 
 .footer_copyright {
@@ -409,6 +466,7 @@ a {
 }
 
 .breadcrumbs {
+	width: 985px;
 	font-family: "RobotoRegular", "Arial", sans-serif;
 	font-size: 14px;
 	line-height: 16px;
@@ -423,6 +481,17 @@ a {
 .pagination {
 	font-family: "RobotoMedium", "Arial", sans-serif;
 	line-height: 18px;
+	border-bottom: 1px solid rgba(255,255,255,0.3);
+}
+
+.pagination ul {
+	display: flex;
+	justify-content: flex-end;
+	width: 1146px;
+}
+
+.pagination li {
+
 }
 
 .pagination li:nth-child(2) {

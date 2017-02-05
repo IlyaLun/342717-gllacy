@@ -213,7 +213,7 @@ a img {
 	margin: 0 0 39px 0;
 	font-size: 18px;
 	line-height: 22px;
-}
+} 
 
 .promo {
 		width: 540px;
@@ -288,7 +288,6 @@ a img {
 }
 
 .introduction {
-	height: 308px;
 	margin: 0 0 40px 0;
 	border-radius: 19px;
 	background-image: url("../img/center_block_backgr.jpg");
@@ -302,22 +301,19 @@ a img {
 	line-height: 30px;
 }
 
-.introduction_wrapper ul {
-	display: flex;
-	margin-top: 0;
-}
+.introduction li {
 
-.introduction_wrapper li {
+	width: 50%;
 	margin: 0 0 0 20px;
 	padding: 9px;
 }
 
-.introduction_wrapper div {
+/* .introduction_wrapper div {
 	width: 540px;
 	padding: 0 40px 0 50px;
-}
+} */
 
-.introduction_wrapper {
+.introduction ul {
 	font-family: "RobotoRegular", "Arial", sans-serif;
 }
 
@@ -373,21 +369,15 @@ a img {
 .location {
 	position: relative;
 	width: 1200px;
-	/* display: flex;
-	justify-content: flex-end;
-	align-items: center;
-	height: 430px; */
+	margin: 0 auto;
 }
 
 .location_info {
 	position: absolute;
 	top: 10px;
-	right: 10px;
+	right: 27px;
 	padding: 32px 25px 25px 25px;
-	/* margin: 27px;
-	width: 277px;
-	height: 273px; */
-	background: white;
+	background: #fff;
 	border-radius: 19px;
 }
 

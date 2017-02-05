@@ -244,6 +244,11 @@ a {
 	flex-wrap: wrap;
 }
 
+/*Убираем у всех img внутри a белую рамку в ie10*/
+a img {
+	border: none;
+}
+
 .products article {
 	width: 267px;
 }

@@ -210,18 +210,15 @@ a {
 
 .promo {
 		width: 540px;
-		border-radius: 19px;
 }
 
 .promo_left{
 		margin-right: 25px;
-		background-image: url("../img/raspberry_backgr.jpg");
-		background-repeat: no-repeat;
+		background: url("../img/raspberry_backgr.png") no-repeat;
 }
 
 .promo_right{
-		background-image: url("../img/chocolate_backgr.jpg");
-		background-repeat: no-repeat;
+		background: url("../img/chocolate_backgr.png") no-repeat;
 }
 
 .promo,

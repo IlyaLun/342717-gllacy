@@ -117,6 +117,17 @@ a img {
 	width: 293px;
 }
 
+.user_block a {
+	display: block;
+	width: 92px;
+	height: 16px;
+	padding: 8px 0 8px 0;
+	text-align: center;
+	text-decoration: none;
+	background: #9db1a6;
+	border-radius: 20px;
+}
+
 /* Подменю при наведении на Каталог, скрыто */
 
 .sub_menu {
@@ -144,7 +155,7 @@ a img {
 .search,
 .btn_enter,
 .basket {
-	margin: 0 0 0 50px; /* Отступы флекс элементам Поиск, Вход, Корзина */
+	margin: 0 0 0 10px;  / *Отступы флекс элементам Поиск, Вход, Корзина */
 }
 
 .btn_enter a,
@@ -220,11 +231,13 @@ a img {
 .promo_left{
 		margin: 0 25px 0 0;
 		background: #d3587e url("../img/raspberry_backgr.jpg") no-repeat;
+		background-size: cover;
 		border-radius: 19px;
 }
 
 .promo_right{
 		background: #6c5453 url("../img/chocolate_backgr.jpg") no-repeat;
+		background-size: cover;
 		border-radius: 19px;
 }
 
@@ -250,10 +263,12 @@ a img {
 	display: flex;
 	justify-content: space-between;
 	flex-wrap: wrap;
+	align-items: top;
 }
 
 .products article {
 	width: 267px;
+	word-wrap: break-word;
 }
 
 .product_item a,
@@ -306,7 +321,8 @@ a img {
 .introduction li {
 	display: inline-block;
 	vertical-align: top;
-	width: 44%;
+	box-sizing: border-box;
+	width: 50%;
 	margin: 0;
 	padding: 0 26px 10px 0;
 	font-size: 16px;
@@ -331,6 +347,7 @@ a img {
 	margin: 0;
 	padding: 10px 20px 66px 20px;
 	background: #ffffff url("../img/strawberry_backgr.jpg") no-repeat;
+	background-size: cover;
 	border-radius: 19px;
 }
 
@@ -338,9 +355,12 @@ a img {
 	width: 540px;
 	margin: 0 0 0 25px;
 	padding: 0 0 0 20px;
-	/*background: white;*/
-	background: url("../img/emailing.jpg") no-repeat;
+	background: url("../img/emailing_pattern.jpg");
 	border-radius: 19px;
+}
+
+.emailing_news_wrapper {
+	
 }
 
 .blog_news p {

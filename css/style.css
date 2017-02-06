@@ -36,7 +36,7 @@ body {
 	font-family: "RobotoBold", "Arial", sans-serif;
 	line-height: 22px;
 	color: #ffffff;
-	background-color: #7d7c7c;
+	background: #7d7c7c;
 	/*background-image: url("../../../psd/gllacy/gllacy/preview/gllacy-index-1200.jpg");*/
 }
 
@@ -54,7 +54,7 @@ a img {
 
 /* Главная обёртка */
 .wrapper {
-	background-color: #849d8f;
+	background: #849d8f;
 }
 
 .wrapper li {
@@ -163,8 +163,6 @@ a img {
 }
 
 /* Контактная информация (блок contact_info) */
-.contact_info {
-}
 
 .schedule {
 	margin: 0;
@@ -175,7 +173,6 @@ a img {
 
 .phone {
 	margin: 0;
-	/*margin: 5px 0 0 0;*/
 	font-size: 22px;
 	line-height: 24px;
 }
@@ -188,6 +185,7 @@ a img {
 }
 
 .sliders {
+	margin: 0 0 50px 0;
 	text-align: center;
 }
 
@@ -209,32 +207,35 @@ a img {
 .promo_wrapper {
 	display: flex;
 	justify-content: space-between;
-	height: 230px;
-	margin: 0 0 39px 0;
+	margin: 0 0 40px 0;
 	font-size: 18px;
 	line-height: 22px;
 } 
 
 .promo {
-		width: 540px;
+		width: 520px;
+		padding: 20px 20px 66px 20px;
 }
 
 .promo_left{
-		margin-right: 25px;
-		background: url("../img/raspberry_backgr.png") no-repeat;
+		margin: 0 25px 0 0;
+		background: #d3587e url("../img/raspberry_backgr.jpg") no-repeat;
+		border-radius: 19px;
 }
 
 .promo_right{
-		background: url("../img/chocolate_backgr.png") no-repeat;
+		background: #6c5453 url("../img/chocolate_backgr.jpg") no-repeat;
+		border-radius: 19px;
 }
 
-.promo,
 .blog_news,
 .emailing_news {
 	padding: 0 20px 10px 20px;
 }
 
 .promo_title {
+	margin: 0;
+	padding: 0;
 	font-size: 35px;
 	line-height: 41px;
 }
@@ -289,31 +290,32 @@ a img {
 
 .introduction {
 	margin: 0 0 40px 0;
+	padding: 25px 20px 25px 20px;
 	border-radius: 19px;
-	background-image: url("../img/center_block_backgr.jpg");
+	background: url("../img/center_block_backgr.jpg");
 }
 
 .introduction h1 {
 	margin: 0;
-	padding: 20px 20px 0 20px;
+	padding: 0 0 10px 0;
 	font-family: "RobotoMedium", "Arial", sans-serif;
 	font-size: 24px;
 	line-height: 30px;
 }
 
 .introduction li {
+	display: inline-block;
+	vertical-align: top;
+	width: 44%;
+	margin: 0;
+	padding: 0 26px 10px 0;
+	font-size: 16px;
+	line-height: 22px;
 
-	width: 50%;
-	margin: 0 0 0 20px;
-	padding: 9px;
 }
 
-/* .introduction_wrapper div {
-	width: 540px;
-	padding: 0 40px 0 50px;
-} */
-
 .introduction ul {
+	font-size: 0;
 	font-family: "RobotoRegular", "Arial", sans-serif;
 }
 
@@ -321,28 +323,24 @@ a img {
 .news {
 	display: flex;
 	justify-content: space-between;
-	height: 220px;
-	margin: 0 0 39px 0;
+	margin: 0 0 40px 0;
 }
 
 .blog_news {
-	width: 540px;
-	margin-right: 25px;
-	background-image: url("../img/strawberry_backgr.jpg");
-	background-repeat: no-repeat;
+	width: 520px;
+	margin: 0;
+	padding: 10px 20px 66px 20px;
+	background: #ffffff url("../img/strawberry_backgr.jpg") no-repeat;
 	border-radius: 19px;
 }
 
 .emailing_news {
 	width: 540px;
-	background-image: url("../img/emailing.jpg");
-	background-repeat: no-repeat;
+	margin: 0 0 0 25px;
+	padding: 0 0 0 20px;
+	/*background: white;*/
+	background: url("../img/emailing.jpg") no-repeat;
 	border-radius: 19px;
-}
-
-.blog_news,
-.emailing_news {
-	width: 560px;
 }
 
 .blog_news p {
@@ -368,17 +366,31 @@ a img {
 
 .location {
 	position: relative;
-	width: 1200px;
-	margin: 0 auto;
+	width: 100%;
+	height: 430px;
+	background: grey;
 }
 
-.location_info {
+/*.location_info {
 	position: absolute;
-	top: 10px;
-	right: 27px;
+	top: 0;
+	bottom: 0;
 	padding: 32px 25px 25px 25px;
 	background: #fff;
 	border-radius: 19px;
+}*/
+
+.location_info {
+ 	position: absolute;
+  top: 0;
+  bottom: 0;
+  left: calc(50% + 220px);
+  width: 302px;
+  height: 305px;
+  margin: auto 0;
+  padding: 30px 25px;
+  background: #fff;
+  border-radius: 15px;
 }
 
 .location_info span {
@@ -414,26 +426,27 @@ a img {
 }
 
 .footer_links {
-	width: 663px;
+	width: 330px;
+	margin: 0 auto;
 	font-family: "RobotoRegular", "Arial", sans-serif;
 	font-size: 13px;
 	line-height: 18px;
-	/*text-align: center;*/
 }
 
 .footer_links ul {
-	display: flex;
-	justify-content: center;
-
+	font-size: 0;
 }
 
-.footer_links div {
-	padding: 0 0 0 20px;
+.footer_links li {
+	display: inline-block;
+	vertical-align: top;
+	width: 50%;
+	padding: 0;
+	font-size: 13px;
 }
 
-.footer_links_wrap li:first-child {
+.footer_links li:first-child {
 	font-family: "RobotoBold", "Arial", sans-serif;
-	list-style-image: url("../img/heart.png")
 }
 
 .footer_copyright {

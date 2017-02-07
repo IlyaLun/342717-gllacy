@@ -518,35 +518,44 @@ a img {
 }
 
 .social_btn {
+	box-sizing: border-box;
 	display: inline-block;
-	width: 38px;
-	height: 38px;
+	width: 36px;
+	height: 36px;
 	margin: 0 5px;
-	/*background: url("../img/social.png") no-repeat;*/
+	background: url("../img/footer_sprite.png") no-repeat;
 	font-size: 0;
-	background-color: rgb(255, 255, 255);
+	border: 3px solid #c2cec7;
 	border-radius: 50%;
-	opacity: 0.702;
+	vertical-align: top;
 }
 
-/*.Обводка {
-  background-color: rgb(255, 255, 255);
-  opacity: 0.702;
-  position: absolute;
-  left: 1208px;
-  top: 2258px;
-  width: 38px;
-  height: 38px;
-  z-index: 70;
-}*/
-
-
-/*.social_btn_twit {
-	background-position: 0 0;
-}*/
+.social_btn_twit {
+	background-position: -116px -6px;
+}
 
 .social_btn_inst {
-	background-position: -48px 0;
+	background-position: -72px -6px;
+}
+
+.social_btn_fb {
+	background-position: -31px -6px;
+}
+
+.social_btn_vk {
+	background-position: -157px -6px;
+}
+
+.social_btn:hover {
+	border: 3px solid #dae2de;
+}
+
+/*.social_btn:active {
+	border: 3px ridge #dae2de; Не доделал при нажатии
+}*/
+
+.social_btn:first-child {
+	margin-left: 0;
 }
 
 .footer_links {
@@ -558,15 +567,32 @@ a img {
 }
 
 .footer_links ul {
+	position: relative;
 	font-size: 0;
 }
 
 .footer_links li {
+	box-sizing: border-box;
 	display: inline-block;
 	vertical-align: top;
 	width: 50%;
-	padding: 0;
+	padding: 0 0 0 20px;
 	font-size: 13px;
+}
+
+.footer_links li:first-child::before {
+	content: "";
+	position: absolute;
+	top: 3px;
+	left: 1px;
+	width: 15px;
+	height: 13px;
+	background: url("../img/footer_sprite.png") no-repeat;
+	background-position: -5px -5px;
+}
+
+.footer_links li:nth-child(even) {
+	padding-left: 0;
 }
 
 .footer_links li:first-child {

@@ -110,24 +110,6 @@ a img {
 	padding-top: 8px;
 }
 
-.user_block {
-	display: flex;
-	justify-content: flex-end;
-	align-items: center;
-	width: 293px;
-}
-
-.user_block a {
-	display: block;
-	width: 92px;
-	height: 16px;
-	padding: 8px 0 8px 0;
-	text-align: center;
-	text-decoration: none;
-	background: #9db1a6;
-	border-radius: 20px;
-}
-
 /* Подменю при наведении на Каталог, скрыто */
 
 .sub_menu {
@@ -150,6 +132,57 @@ a img {
 /* Скрыл попапы*/
 .user_block form {
 	display: none;
+}
+
+.user_block {
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+	width: 293px;
+}
+
+.user_block a {
+	display: block;
+	width: 92px;
+	height: 16px;
+	padding: 8px 0 8px 15px;
+	text-align: center;
+	text-decoration: none;
+	background: #9db1a6;
+	border-radius: 20px;
+}
+
+.search {
+	width: 32px;
+	height: 32px;
+	background: #9db1a6 url("../img/header_sprite.png") no-repeat;
+	background-position: 2px -125px;
+	border-radius: 50%;
+}
+
+.search:hover {
+	width: 32px;
+	height: 32px;
+	background: #f8f7f4 url("../img/header_sprite.png") no-repeat;
+	background-position: 2px -154px;
+	border-radius: 50%;
+	cursor: pointer;
+}
+
+.btn_enter a {
+	background: #9db1a6 url("../img/header_sprite.png") no-repeat;
+	background-position: 12px -63px;
+}
+
+.btn_enter a:hover {
+	color: #323232;
+	background: #f8f7f4 url("../img/header_sprite.png") no-repeat;
+	background-position: 12px -94px;
+}
+
+.basket a {
+	background: #9db1a6 url("../img/header_sprite.png") no-repeat;
+	background-position: 9px -32px;
 }
 
 .search,
@@ -305,7 +338,7 @@ a img {
 
 .introduction {
 	margin: 0 0 40px 0;
-	padding: 25px 20px 25px 20px;
+	padding: 25px 20px 0 20px;
 	border-radius: 19px;
 	color: #323232;
 	background: #e8d6b2 url("../img/center_block_backgr2.jpg");
@@ -313,7 +346,7 @@ a img {
 
 .introduction h1 {
 	margin: 0;
-	padding: 0 0 10px 0;
+	padding: 0 0 20px 0;
 	font-family: "RobotoMedium", "Arial", sans-serif;
 	font-size: 24px;
 	line-height: 30px;
@@ -330,7 +363,7 @@ a img {
 	box-sizing: border-box;
 	width: 50%;
 	margin: 0 0 25px 0;
-	padding: 0 20px 0 60px;
+	padding: 0 20px 0 65px;
 	font-size: 16px;
 	line-height: 22px;
 	vertical-align: top;
@@ -351,8 +384,16 @@ a img {
 	border-radius: 50%;
 }
 
-.introduction_list_2::before {
-	 background-position-x: 10px;
+.introduction .introduction_list_1::before {
+	 background-position: -48px 0;
+}
+
+.introduction .introduction_list_3::before {
+	 background-position: -96px 0;
+}
+
+.introduction .introduction_list_4::before {
+	 background-position-x: -145px;
 }
 
 /* Блок с новостями блога и email-подпиской */
@@ -474,6 +515,38 @@ a img {
 .footer_social {
 	width: 293px;
 	font-size: 13px;
+}
+
+.social_btn {
+	display: inline-block;
+	width: 38px;
+	height: 38px;
+	margin: 0 5px;
+	/*background: url("../img/social.png") no-repeat;*/
+	font-size: 0;
+	background-color: rgb(255, 255, 255);
+	border-radius: 50%;
+	opacity: 0.702;
+}
+
+/*.Обводка {
+  background-color: rgb(255, 255, 255);
+  opacity: 0.702;
+  position: absolute;
+  left: 1208px;
+  top: 2258px;
+  width: 38px;
+  height: 38px;
+  z-index: 70;
+}*/
+
+
+/*.social_btn_twit {
+	background-position: 0 0;
+}*/
+
+.social_btn_inst {
+	background-position: -48px 0;
 }
 
 .footer_links {

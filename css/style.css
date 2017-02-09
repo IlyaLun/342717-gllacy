@@ -61,9 +61,9 @@ a img {
 	list-style: none; /* Убрал маркер у всех li */
 }
 
-.wrapper ul {
-	padding: 0; /* Убрал отсутп в 40 px у всех ul */
-}
+/*.wrapper ul {
+	padding: 0;  Убрал отсутп у всех ul 
+}*/
 
 /* Для центровщика */
 .container {
@@ -90,6 +90,7 @@ a img {
 /* Главное меню навигации */
 /* Сделал флекс-контейнером ul внутри .main_menu, li-шки стали флекс-элементами */
 .main_menu > ul {
+	position: relative;
 	display: flex;
 	justify-content: flex-start;
 	align-items: center;
@@ -103,7 +104,20 @@ a img {
 }
 
 .main_menu li {
-	margin-right: 20px;
+	margin-right: 17px;
+}
+
+.main_menu > li:first-child {
+	margin-right: 24px;
+}
+
+/*.main_menu li:nth-child(2):hover {*/
+.main_menu .catalog {
+	padding: 5px 12px;
+	background: #f7f6f3;
+	text-decoration: none;
+	border-radius: 20px;
+	color: black;
 }
 
 .main_logo {
@@ -112,19 +126,86 @@ a img {
 
 /* Подменю при наведении на Каталог, скрыто */
 
-.sub_menu {
-	display: none;
+/*.sub_menu a {
+	position: absolute;
+	top: 58px;
+	left: 162px;
+
+	padding: 10px;
+
 	font-family: "RobotoRegular", "Arial", sans-serif;
 	font-size: 14px;
 	line-height: 16px;
+	background: white;
+	border-radius: 5px;
+}
+*/
+
+.sub_menu {
+		position: absolute;
+		top: 58px;
+		left: 162px;
+		z-index: 10;
+		display: none;
+		width: 150px;
+		margin: 0;
+		padding: 0;
+		font-family: "RobotoRegular", "Arial", sans-serif;
+		font-size: 14px;
+		line-height: 16px;
+		background: #f8f7f4;
+		border-radius: 5px;
+}
+
+.main_menu > li:hover .sub_menu {
+		display: block;
+}
+
+/*.sub_menu:hover {
+		position: absolute;
+		top: 58px;
+		left: 162px;
+		z-index: 10;
+		display: none;
+		width: 150px;
+		margin: 0;
+		padding: 0;
+		font-family: "RobotoRegular", "Arial", sans-serif;
+		font-size: 14px;
+		line-height: 16px;
+		background: #f8f7f4;
+		border-radius: 5px;
+}*/
+
+.sub_menu li {
+		margin: 0;
+		padding: 9px 10px;
 }
 
 .sub_menu li:first-child {
-	font-family: "RobotoBold", "Arial", sans-serif;
+		font-family: "RobotoBold", "Arial", sans-serif;
+		border-bottom: 1px solid #d1d0ce;
+}
+
+.sub_menu li:first-child:hover {
+	border-radius: 5px;
+}
+
+.sub_menu li:last-child:hover {
+	border-radius: 5px;
+}
+
+.sub_menu li:hover {
+	background: #fbded7;
+}
+
+.sub_menu li:active {
+	background: #f6b5a5;
 }
 
 .sub_menu a {
 	color: #323232;
+	text-decoration: none;
 }
 
 /* Юзерблок Поиск, Вход и Корзина */
@@ -229,12 +310,12 @@ a img {
 }
 
 .sliders {
-	margin: 0 0 50px 0;
+	margin: 0 0 37px 0;
 	text-align: center;
 }
 
 .slide {
-	padding: 250px 0 0 0;
+	padding: 205px 0 0 0;
 }
 
 .sliders h2 {
@@ -290,20 +371,20 @@ a img {
 .promo {
 		position: relative;
 		width: 520px;
-		padding: 20px 20px 89px 20px;
+		padding: 15px 20px 89px 20px;
 }
 
 .promo_left{
 		margin: 0 25px 0 0;
 		background: #d3587e url("../img/raspberry_backgr.jpg") no-repeat;
 		background-size: cover;
-		border-radius: 19px;
+		border-radius: 15px;
 }
 
 .promo_right{
 		background: #6c5453 url("../img/chocolate_backgr.jpg") no-repeat;
 		background-size: cover;
-		border-radius: 19px;
+		border-radius: 15px;
 }
 
 .promo_btn {
@@ -343,11 +424,6 @@ a img {
 	box-shadow: inset 0 2px 2px rgba(172, 16, 0, 1);
 }
 
-.blog_news,
-.emailing_news {
-	padding: 0 20px 10px 20px;
-}
-
 .promo_title {
 	margin: 0;
 	padding: 0;
@@ -382,6 +458,17 @@ a img {
 
 .product_item {
 	position: relative;
+}
+
+.product_hit::before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 61px;
+	height: 61px;
+	background: url("../img/hit.png") no-repeat;
+	border-radius: 50%;
 }
 
 .price {
@@ -516,10 +603,24 @@ a img {
 .blog_news {
 	width: 520px;
 	margin: 0;
-	padding: 10px 20px 66px 20px;
+	padding: 23px 20px 82px 20px;
+
 	background: #ffffff url("../img/strawberry_backgr.jpg") no-repeat;
 	background-size: cover;
-	border-radius: 19px;
+	border-radius: 15px;
+}
+
+.blog_news p {
+	margin: 0;
+	padding-bottom: 5px; 
+	font-family: "RobotoMedium", "Arial", sans-serif;
+}
+
+.blog_news a {
+	font-size: 24px;
+	line-height: 30px;
+	text-decoration: underline;
+	color: #323232;
 }
 
 .emailing_news {
@@ -533,13 +634,13 @@ a img {
 
 .emailing_news_wrapper {
 	height: 100%;
-	padding: 0 20px 0 20px;
+	padding: 0 19px 0 20px;
 	background: #f8f7f4;
 	border-radius: 19px;
 }
 
 .emailing_news_wrapper p {
-	padding-top: 20px;
+	padding-top: 28px;
 }
 
 .emailing_news_wrapper form {
@@ -589,17 +690,6 @@ a img {
 	background: -webkit-linear-gradient(top, #d84732 0%, #e1613e 100%);
 	background:         linear-gradient(to bottom, #d84732 0%, #e1613e 100%);
 	box-shadow: inset 0 2px 2px rgba(172, 16, 0, 1);
-}
-
-.blog_news p {
-	font-family: "RobotoMedium", "Arial", sans-serif;
-}
-
-.blog_news a {
-	font-size: 24px;
-	line-height: 30px;
-	text-decoration: underline;
-	color: #323232;
 }
 
 .emailing_news {
@@ -709,7 +799,6 @@ a img {
 }
 
 .footer_social {
-	width: 293px;
 	font-size: 13px;
 }
 
@@ -727,28 +816,40 @@ a img {
 }
 
 .social_btn_twit {
-	background-position: -116px -6px;
+	background-position: -115px -6px;
+}
+
+.social_btn_twit:active {
+	background-position: -115px -4px;
 }
 
 .social_btn_inst {
-	background-position: -72px -6px;
+	background-position: -73px -6px;
+}
+
+.social_btn_inst:active {
+	background-position: -73px -4px;
 }
 
 .social_btn_fb {
 	background-position: -31px -6px;
 }
 
+.social_btn_fb:active {
+	background-position: -31px -4px;
+}
+
 .social_btn_vk {
 	background-position: -157px -6px;
+}
+
+.social_btn_vk:active {
+	background-position: -157px -4px;
 }
 
 .social_btn:hover {
 	border: 3px solid #dae2de;
 }
-
-/*.social_btn:active {
-	border: 3px ridge #dae2de; Не доделал при нажатии
-}*/
 
 .social_btn:first-child {
 	margin-left: 0;

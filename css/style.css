@@ -117,6 +117,10 @@ a img {
 	background: #f7f6f3;
 }
 
+.main_menu .catalog:active {
+	box-shadow: inset 0 2px 2px rgba(102, 102, 102, 1);
+}
+
 .main_menu .catalog:hover a {
 	color: #323232;
 	text-decoration: none;
@@ -127,19 +131,6 @@ a img {
 }
 
 /* Подменю при наведении на Каталог, скрыто */
-
-.Подложка {
-  border-radius: 5px;
-  background-color: rgb(248, 247, 244);
-  box-shadow: 0px 20px 20px 0px rgba(0, 0, 0, 0.4);
-  position: absolute;
-  left: 359px;
-  top: 282px;
-  width: 143px;
-  height: 171px;
-  z-index: 381;
-}
-
 
 .sub_menu {
 		position: absolute;
@@ -216,11 +207,9 @@ a img {
 	padding: 8px 0 8px 15px;
 	text-align: center;
 	text-decoration: none;
-	background: #9db1a6;
-	border-radius: 20px;
+
 }
 
-.btn_enter form,
 .basket form {
 	display: none;
 }
@@ -273,15 +262,85 @@ a img {
 	display: block;
 }
 
-.btn_enter a {
+.btn_enter .login {
 	background: #9db1a6 url("../img/header_sprite.png") no-repeat;
 	background-position: 12px -63px;
+	border-radius: 20px;
 }
 
-.btn_enter a:hover {
+.btn_enter .login:hover {
 	color: #323232;
 	background: #f8f7f4 url("../img/header_sprite.png") no-repeat;
 	background-position: 12px -94px;
+}
+
+.btn_enter {
+	position: relative;
+}
+
+.btn_enter form {
+	position: absolute;
+	top: 31px;
+	right: 1px;
+
+	/*display: none;*/
+	box-sizing: border-box;
+	width: 277px;
+	height: 214px;
+	padding: 20px;
+
+	background: rgb(248, 247, 244);
+	border-radius: 6px;
+	box-shadow: 0px 20px 20px 0px rgba(0, 0, 0, 0.4);
+}
+
+.btn_enter input {
+	box-sizing: border-box;
+	width: 100%;
+	margin-bottom: 20px;
+	padding: 14px;
+
+	background: rgb(255, 255, 255);
+	border: 1px solid rgb(211, 211, 210);
+	border-radius: 5px;
+}
+
+.btn_enter .btn {
+	padding: 10px 20px;
+
+	font-family: "RobotoBold", "Arial", sans-serif;
+	font-size: 18px;
+	line-height: 24px;
+	color: #ffffff;
+	text-shadow: 0 2px 5px rgba(160, 32, 11, 0.76);
+
+	background: #f26843;
+	background:    -moz-linear-gradient(top, #f26843 0%, #e74a35 100%);
+	background: -webkit-linear-gradient(top, #f26843 0%, #e74a35 100%);
+	background:         linear-gradient(to bottom, #f26843 0%, #e74a35 100%);
+	border-radius: 100px;
+	border: none;
+	box-shadow: 0 2px 2px rgba(172, 16, 0, 0.64);
+
+	outline: none;
+}
+
+.btn_enter .btn:hover {
+	background:    -moz-linear-gradient(top, #f58669 0%, #ec6f5e 100%);
+	background: -webkit-linear-gradient(top, #f58669 0%, #ec6f5e 100%);
+	background:         linear-gradient(to bottom, #f58669 0%, #ec6f5e 100%);
+	box-shadow: 0 2px 2px rgba(172, 16, 0, 1);
+}
+
+.btn_enter .btn:active {
+	background:    -moz-linear-gradient(top, #d84732 0%, #e1613e 100%);
+	background: -webkit-linear-gradient(top, #d84732 0%, #e1613e 100%);
+	background:         linear-gradient(to bottom, #d84732 0%, #e1613e 100%);
+	box-shadow: inset 0 2px 2px rgba(172, 16, 0, 1);
+}
+
+.btn_enter a {
+
 }
 
 .basket a {
@@ -688,7 +747,6 @@ a img {
 	font-size: 18px;
 	line-height: 24px;
 	color: #ffffff;
-	text-decoration: none;
 	text-shadow: 0 2px 5px rgba(160, 32, 11, 0.76);
 
 	background: #f26843;

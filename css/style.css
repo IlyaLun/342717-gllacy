@@ -37,12 +37,12 @@ body {
 	line-height: 22px;
 	color: #ffffff;
 	background: #7d7c7c;
-	/*background-image: url("../../../psd/gllacy/gllacy/preview/gllacy-index-1200.jpg");*/
 }
 
 a {
 	color: #fff;
-	text-decoration-color: rgba(255,255,255,0.3)
+	text-decoration: none;
+	/*text-decoration-color: rgba(255,255,255,0.3)*/
 }
 
 /*Убираем у всех img внутри a белую рамку в ie10*/
@@ -86,12 +86,16 @@ a img {
 /* Главное меню навигации */
 /* Сделал флекс-контейнером ul внутри .main_menu, li-шки стали флекс-элементами */
 .main_menu > ul {
-	/*position: relative;*/
 	display: flex;
 	justify-content: flex-start;
 	align-items: center;
 	margin: 0;
 	padding: 0;
+}
+
+.main_menu a {
+	text-decoration: underline;
+	text-decoration-color: rgba(255,255,255,0.3)
 }
 
 /*.main_menu {
@@ -544,13 +548,37 @@ a img {
 	position: relative;
 }
 
+.product_item:hover > a {
+	position: absolute;
+	top: -5px;
+	left: -13px;
+	z-index: 9;
+
+	box-sizing: border-box;
+	width: 293px;
+	height: 400px;
+	padding: 5px 13px 0;
+
+	border-radius: 5px;
+	background: rgba(255,255,255, 0.2);
+	box-shadow: 0px 20px 20px 0px rgba(0, 0, 0, 0.4);
+}
+
+.product_item:hover > a .products_btn {
+	display: block;
+}
+
+/* Иконка хита */
 .product_hit::before {
 	content: "";
 	position: absolute;
 	top: 0;
 	left: 0;
+	z-index: 10;
+
 	width: 61px;
 	height: 61px;
+
 	background: url("../img/hit.png") no-repeat;
 	border-radius: 50%;
 }
@@ -558,17 +586,19 @@ a img {
 .price {
 	position: absolute;
 	top: 200px;
+
 	margin: 0;
+
 	font-size: 45px;
 	line-height: 45px;
 }
 
 .products_btn {
 	position: absolute;
-	left: 40px;
-	bottom: -65px;
+	left: 50px;
+	bottom: 0;
 
-	/*display: none;*/
+	display: none;
 	padding: 12px 17px;
 
 	vertical-align: top;
@@ -600,8 +630,16 @@ a img {
 
 .product_title {
 	margin: 9px 0;
+
 	font-family: "Roboto Medium", "Arial", sans-serif;
+	text-decoration: underline;
+	text-decoration-color: rgba(255,255,255,0.3);
 	text-align: center;
+}
+
+.product_title:hover {
+	text-decoration: none;
+	color: #ffbc9e;
 }
 
 .kg {
@@ -710,6 +748,10 @@ a img {
 	line-height: 30px;
 	text-decoration: underline;
 	color: #323232;
+}
+
+.blog_news a:hover {
+	color: #e84d37;
 }
 
 .emailing_news {
@@ -945,12 +987,23 @@ a img {
 	margin-left: 0;
 }
 
+.footer_links a,
+.footer_copyright a {
+	text-decoration: underline;
+	text-decoration-color: rgba(255,255,255,0.3)
+}
+
 .footer_links {
 	width: 330px;
 	margin: 0 auto;
 	font-family: "RobotoRegular", "Arial", sans-serif;
 	font-size: 13px;
 	line-height: 18px;
+}
+
+.footer_links a:hover,
+.footer_copyright a:hover {
+	color: #ffbc9e;
 }
 
 .footer_links ul {

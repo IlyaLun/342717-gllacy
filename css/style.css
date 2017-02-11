@@ -107,7 +107,7 @@ a img {
 	margin-right: 24px;
 }
 
-.catalog {
+.main_menu .catalog {
 	position: relative;
 	padding: 5px 12px;
 	border-radius: 20px;
@@ -132,6 +132,10 @@ a img {
 
 /* Подменю при наведении на Каталог, скрыто */
 
+.main_menu .catalog:hover .sub_menu { /*Наведение на каталог и выпадающее меню*/
+		display: block;
+}
+
 .sub_menu {
 		position: absolute;
 		top: 32px;
@@ -150,10 +154,6 @@ a img {
 		background: rgb(248, 247, 244);
 		border-radius: 5px;
 		box-shadow: 0px 20px 20px 0px rgba(0, 0, 0, 0.4);
-}
-
-.main_menu li:nth-child(2):hover .sub_menu { /*Наведение на каталог и выпадающее меню*/
-		display: block;
 }
 
 .sub_menu li {
@@ -200,30 +200,31 @@ a img {
 	width: 293px;
 }
 
-.user_block a {
+.user_block .login,
+.user_block .basket_block a {
 	display: block;
 	width: 92px;
 	height: 16px;
 	padding: 8px 0 8px 15px;
 	text-align: center;
 	text-decoration: none;
-
 }
 
-.basket form {
+.basket_block form {
 	display: none;
 }
 
-.search {
+.search_block {
 	position: relative;
 	width: 32px;
 	height: 32px;
+	margin: 0 0 0 10px;
 	background: #9db1a6 url("../img/header_sprite.png") no-repeat;
 	background-position: 2px -125px;
 	border-radius: 50%;
 }
 
-.search:hover {
+.search_block:hover {
 	width: 32px;
 	height: 32px;
 	background: #f8f7f4 url("../img/header_sprite.png") no-repeat;
@@ -232,7 +233,7 @@ a img {
 	cursor: pointer;
 }
 
-.search form {
+.search_block form {
 	position: absolute;
 	top: 32px;
 	right: 10px;
@@ -248,7 +249,7 @@ a img {
 	box-shadow: 0px 20px 20px 0px rgba(0, 0, 0, 0.4);
 }
 
-.search input {
+.search_block input {
 	box-sizing: border-box;
 	width: 311px;
 	height: 44px;
@@ -258,35 +259,39 @@ a img {
 	border-radius: 5px;
 }
 
-.search:hover form {
+.search_block:hover form {
 	display: block;
 }
 
-.btn_enter .login {
+.entry_block .login {
+	font-family: "RobotoMedium", "Arial", sans-serif;
+	font-size: 14px;
+	line-height: 16px;
+
 	background: #9db1a6 url("../img/header_sprite.png") no-repeat;
 	background-position: 12px -63px;
 	border-radius: 20px;
 }
 
-.btn_enter .login:hover {
+.entry_block .login:hover {
 	color: #323232;
 	background: #f8f7f4 url("../img/header_sprite.png") no-repeat;
 	background-position: 12px -94px;
 }
 
-.btn_enter {
+.entry_block {
 	position: relative;
+	margin: 0 0 0 10px;
 }
 
-.btn_enter form {
+.entry_block form {
 	position: absolute;
 	top: 31px;
 	right: 1px;
 
-	/*display: none;*/
+	display: none;
 	box-sizing: border-box;
 	width: 277px;
-	height: 214px;
 	padding: 20px;
 
 	background: rgb(248, 247, 244);
@@ -294,7 +299,11 @@ a img {
 	box-shadow: 0px 20px 20px 0px rgba(0, 0, 0, 0.4);
 }
 
-.btn_enter input {
+.entry_block:hover form {
+	display: block;
+}
+
+.entry_block input {
 	box-sizing: border-box;
 	width: 100%;
 	margin-bottom: 20px;
@@ -305,7 +314,16 @@ a img {
 	border-radius: 5px;
 }
 
-.btn_enter .btn {
+.user_login a {
+	font-family: "RobotoRegular", "Arial", sans-serif;
+	font-size: 13px;
+	line-height: 24px;
+	color: #323232;
+	text-decoration: underline;
+	/*Не доверстал ссылки в одну колонку*/
+}
+
+.entry_block .btn { /* Кнопка Войти в попапе Входа */
 	padding: 10px 20px;
 
 	font-family: "RobotoBold", "Arial", sans-serif;
@@ -325,48 +343,32 @@ a img {
 	outline: none;
 }
 
-.btn_enter .btn:hover {
+.entry_block .btn:hover {
 	background:    -moz-linear-gradient(top, #f58669 0%, #ec6f5e 100%);
 	background: -webkit-linear-gradient(top, #f58669 0%, #ec6f5e 100%);
 	background:         linear-gradient(to bottom, #f58669 0%, #ec6f5e 100%);
 	box-shadow: 0 2px 2px rgba(172, 16, 0, 1);
 }
 
-.btn_enter .btn:active {
+.entry_block .btn:active {
 	background:    -moz-linear-gradient(top, #d84732 0%, #e1613e 100%);
 	background: -webkit-linear-gradient(top, #d84732 0%, #e1613e 100%);
 	background:         linear-gradient(to bottom, #d84732 0%, #e1613e 100%);
 	box-shadow: inset 0 2px 2px rgba(172, 16, 0, 1);
 }
 
-.btn_enter a {
-
+.basket_block {
+	margin: 0 0 0 10px;
 }
 
-.basket a {
-	background: #9db1a6 url("../img/header_sprite.png") no-repeat;
-	background-position: 9px -32px;
-}
-
-.search,
-.btn_enter,
-.basket {
-	margin: 0 0 0 10px;  / *Отступы флекс элементам Поиск, Вход, Корзина */
-}
-
-.btn_enter a,
-.basket a {
+.basket_block a {
 	font-family: "RobotoMedium", "Arial", sans-serif;
 	font-size: 14px;
 	line-height: 16px;
-}
 
-.user_login a {
-	font-family: "RobotoRegular", "Arial", sans-serif;
-	font-size: 13px;
-	line-height: 24px;
-	color: #323232;
-	text-decoration: underline;
+	background: #9db1a6 url("../img/header_sprite.png") no-repeat;
+	background-position: 9px -32px;
+	border-radius: 20px;
 }
 
 /* Контактная информация (блок contact_info) */
@@ -562,7 +564,11 @@ a img {
 }
 
 .products_btn {
-	display: none;
+	position: absolute;
+	left: 40px;
+	bottom: -65px;
+
+	/*display: none;*/
 	padding: 12px 17px;
 
 	vertical-align: top;
@@ -784,8 +790,10 @@ a img {
 }
 
 /* Блок с картой*/
-.form_feedback {
-	display: none;
+.location .form_feedback {
+	position: absolute;
+
+	/*display: none;*/
 }
 
 .location {

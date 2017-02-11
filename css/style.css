@@ -42,7 +42,6 @@ body {
 a {
 	color: #fff;
 	text-decoration: none;
-	/*text-decoration-color: rgba(255,255,255,0.3)*/
 }
 
 /*Убираем у всех img внутри a белую рамку в ie10*/
@@ -94,49 +93,61 @@ a img {
 }
 
 .main_menu a {
-	text-decoration: underline;
-	text-decoration-color: rgba(255,255,255,0.3)
+	border-bottom: 1px solid rgba(255,255,255, 0.3)
 }
 
-/*.main_menu {
-	width: 853px;
-	line-height: 18px;
-}*/
-
 .main_menu li {
-	margin-right: 17px;
+	padding: 5px 12px;
+}
+
+.main_menu .active {
+	color: rgb(255, 255, 255);
+	background: rgb(208, 112, 88);
+	border-radius: 15px;
+}
+
+.main_menu .active a,
+.main_logo a { /* Убрал подчеркивание у ссылки под пунктом Каталог и у ссылки с логотипом */
+	border-bottom: none;
 }
 
 .main_menu > li:first-child {
 	margin-right: 24px;
+	padding: 0;
 }
 
-.main_menu .catalog {
+.main_menu li:nth-child(2) {
 	position: relative;
-	padding: 5px 12px;
+}
+
+.main_menu li:hover {
+	background: #f7f6f3;
 	border-radius: 20px;
 }
 
-.main_menu .catalog:hover {
-	background: #f7f6f3;
-}
-
-.main_menu .catalog:active {
-	box-shadow: inset 0 2px 2px rgba(102, 102, 102, 1);
-}
-
-.main_menu .catalog:hover a {
+.main_menu li:hover a {
 	color: #323232;
 	text-decoration: none;
 }
 
-.main_logo {
+.main_menu li:active {
+	box-shadow: inset 0 2px 2px rgba(102, 102, 102, 1);
+}
+
+.main_menu .main_logo {
+	margin-right: 17px;
+	padding: 0;
 	padding-top: 8px;
 }
 
-/* Подменю при наведении на Каталог, скрыто */
+.main_menu .main_logo:hover {
+	background: none;
+	box-shadow: none;
+}
 
-.main_menu .catalog:hover .sub_menu { /*Наведение на каталог и выпадающее меню*/
+/* Подменю при наведении на Каталог */
+
+.main_menu li:hover .sub_menu { /*Наведение на каталог и выпадающее меню */
 		display: block;
 }
 
@@ -147,7 +158,7 @@ a img {
 		z-index: 10;
 
 		display: none;
-		width: 150px;
+		width: 143px;
 		margin: 0;
 		padding: 0;
 
@@ -162,7 +173,7 @@ a img {
 
 .sub_menu li {
 		margin: 0;
-		padding: 9px 10px;
+		padding: 9px 20px;
 }
 
 .sub_menu li:first-child {
@@ -184,10 +195,12 @@ a img {
 
 .sub_menu li:hover {
 	background: #fbded7;
+	border-radius: 0;
 }
 
 .sub_menu li:active {
 	background: #f6b5a5;
+	box-shadow: none;
 }
 
 .sub_menu a {
@@ -204,6 +217,11 @@ a img {
 	width: 293px;
 }
 
+.user_block input:focus {
+	border: 2px solid rgb(46, 136, 228);
+	outline: none; /* Убирает синюю рамку в Chrome*/
+}
+
 .user_block .login,
 .user_block .basket_block a {
 	display: block;
@@ -212,6 +230,10 @@ a img {
 	padding: 8px 0 8px 15px;
 	text-align: center;
 	text-decoration: none;
+}
+
+.user_block .basket_block a {
+	padding-left: 20px;
 }
 
 .basket_block form {
@@ -292,6 +314,7 @@ a img {
 	position: absolute;
 	top: 31px;
 	right: 1px;
+	z-index: 20;
 
 	display: none;
 	box-sizing: border-box;
@@ -530,7 +553,7 @@ a img {
 	justify-content: space-between;
 	flex-wrap: wrap;
 	align-items: top;
-	margin-bottom: 28px;
+	margin-bottom: 8px;
 }
 
 .products article {
@@ -539,13 +562,9 @@ a img {
 	word-wrap: break-word;
 }
 
-/*.product_item a,
-.product_item .btn {
-	text-align: center;
-}*/
-
 .product_item {
 	position: relative;
+	padding-bottom: 25px;
 }
 
 .product_item:hover > a {
@@ -557,7 +576,7 @@ a img {
 	box-sizing: border-box;
 	width: 293px;
 	height: 400px;
-	padding: 5px 13px 0;
+	padding: 5px 13px;
 
 	border-radius: 5px;
 	background: rgba(255,255,255, 0.2);
@@ -630,16 +649,16 @@ a img {
 
 .product_title {
 	margin: 9px 0;
-
 	font-family: "Roboto Medium", "Arial", sans-serif;
-	text-decoration: underline;
-	text-decoration-color: rgba(255,255,255,0.3);
-	text-align: center;
 }
 
-.product_title:hover {
-	text-decoration: none;
+.product_title span { /* Подчеркивание наименований внутри класса .product_title */
+	border-bottom: 1px solid rgba(255,255,255, 0.3);
+}
+
+.product_title span:hover {
 	color: #ffbc9e;
+	border-bottom: none;
 }
 
 .kg {
@@ -785,6 +804,11 @@ a img {
 	padding: 12px 14px;
 	border: 1px solid #d3d3d2;
 	border-radius: 5px;
+}
+
+.emailing_news_wrapper input:focus {
+	border: 2px solid rgb(46, 136, 228);
+	outline: none; /* Убирает синюю рамку в Chrome*/
 }
 
 .subscribe_btn {
@@ -989,8 +1013,7 @@ a img {
 
 .footer_links a,
 .footer_copyright a {
-	text-decoration: underline;
-	text-decoration-color: rgba(255,255,255,0.3)
+	border-bottom: 1px solid rgba(255,255,255, 0.3);
 }
 
 .footer_links {
@@ -1004,6 +1027,7 @@ a img {
 .footer_links a:hover,
 .footer_copyright a:hover {
 	color: #ffbc9e;
+	border-bottom: 1px solid rgba(249,172,159, 0.3);
 }
 
 .footer_links ul {
@@ -1051,15 +1075,39 @@ a img {
 	display: block;
 }
 
+.footer_copyright .footer_logo {
+	border-bottom: none;
+}
+
+.footer_copyright .footer_logo:hover {
+	border-bottom: none;
+}
+
 /* Стилизуем catalog.html */
 
 /* Хлебные крошки в header */
 .breadcrumbs ul {
 	display: flex;
+
+	padding: 0;
 }
 
 .breadcrumbs li {
+	position: relative;
+
 	margin-right: 20px;
+}
+
+.breadcrumbs li::after {
+	position: absolute;
+	top: 0;
+	right: -10px;
+
+	content: '»';
+}
+
+.breadcrumbs li:last-child::after {
+	display: none;
 }
 
 .breadcrumbs {
@@ -1069,10 +1117,23 @@ a img {
 	line-height: 16px;
 }
 
+.breadcrumbs a {
+	border-bottom: 1px solid rgba(255,255,255, 0.3);
+}
+
+.breadcrumbs a:hover {
+	color: #ffbc9e;
+	border-bottom: 1px solid rgba(249,172,159, 0.3);
+}
+
 /* main */
 .page_title {
 	font-size: 35px;
 	line-height: 41px;
+}
+
+.filters {
+	margin-bottom: 40px;
 }
 
 .pagination {

@@ -239,7 +239,7 @@ a img {
 }
 
 .user_block .login,
-.user_block .basket_block a {
+.user_block .basket_block > a {
 	display: block;
 	width: 92px;
 	height: 16px;
@@ -248,7 +248,7 @@ a img {
 	text-decoration: none;
 }
 
-.user_block .basket_block a {
+.user_block .basket_block > a {
 	padding-left: 20px;
 }
 
@@ -425,7 +425,7 @@ a img {
 	padding: 10px 0;
 }
 
-.basket_block a {
+.basket_block > a {
 	font-family: "RobotoMedium", "Arial", sans-serif;
 	font-size: 14px;
 	line-height: 16px;
@@ -439,6 +439,98 @@ a img {
 	color: #323232;
 	background: #f8f7f4 url("../img/header_sprite.png") no-repeat;
 	background-position: 6px 0;
+}
+
+.order {
+	position: absolute;
+	top: 51px;
+	right: 0;
+	z-index: 30;
+
+	display: none;
+	box-sizing: border-box;
+	width: 539px;
+	padding: 10px 15px 20px 10px;
+
+	border-radius: 5px;
+	background-color: rgb(248, 247, 244);
+	box-shadow: 0px 20px 20px 0px rgba(0, 0, 0, 0.4);
+}
+
+/* Таблица попапа с заказом */
+
+.order table {
+	width: 100%;
+}
+
+.order table,
+.order a {
+
+	font-family: "RobotoRegular", "Arial", sans-serif;
+	font-size: 13px;
+	line-height: 16px;
+	color: #323232;
+
+}
+
+.order td {
+	padding: 5px 5px 13px 5px;
+}
+
+.order tr:last-child {
+
+	text-align: right;
+	font-family: "RobotoBold", "Arial", sans-serif;
+	font-size: 15px;
+	line-height: 18px;
+
+}
+
+.order .total { /* Итого в таблице заказа */
+	padding-top: 16px;
+	border-top: 1px solid #cacac7;
+}
+
+.order span { /* Цена за килограм, серая */
+	color: #cacac7;
+}
+
+.basket_block:hover .order { /* Выпадающая таблица с заказами */
+	display: block;
+}
+
+.order .checkout_btn {
+	float: right;
+
+	padding: 10px 13px;
+
+	font-family: "RobotoBold", "Arial", sans-serif;
+	font-size: 18px;
+	line-height: 24px;
+	color: #ffffff;
+	text-shadow: 0 2px 5px rgba(160, 32, 11, 0.76);
+
+	background: #f26843;
+	background:    -moz-linear-gradient(top, #f26843 0%, #e74a35 100%);
+	background: -webkit-linear-gradient(top, #f26843 0%, #e74a35 100%);
+	background:         linear-gradient(to bottom, #f26843 0%, #e74a35 100%);
+	border-radius: 100px;
+	border: none;
+	box-shadow: 0 2px 2px rgba(172, 16, 0, 0.64);
+}
+
+.order .checkout_btn:hover {
+	background:    -moz-linear-gradient(top, #f58669 0%, #ec6f5e 100%);
+	background: -webkit-linear-gradient(top, #f58669 0%, #ec6f5e 100%);
+	background:         linear-gradient(to bottom, #f58669 0%, #ec6f5e 100%);
+	box-shadow: 0 2px 2px rgba(172, 16, 0, 1);
+}
+
+.order .checkout_btn:active {
+	background:    -moz-linear-gradient(top, #d84732 0%, #e1613e 100%);
+	background: -webkit-linear-gradient(top, #d84732 0%, #e1613e 100%);
+	background:         linear-gradient(to bottom, #d84732 0%, #e1613e 100%);
+	box-shadow: inset 0 2px 2px rgba(172, 16, 0, 1);
 }
 
 /* Контактная информация (блок contact_info) */
@@ -903,7 +995,7 @@ a img {
 .location .form_feedback {
 	position: absolute;
 
-	/*display: none;*/
+	display: none;
 }
 
 .location {

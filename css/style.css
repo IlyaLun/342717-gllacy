@@ -688,7 +688,7 @@ a img {
 	justify-content: space-between;
 	flex-wrap: wrap;
 	align-items: top;
-	margin-bottom: 8px;
+	margin-bottom: 45px;
 }
 
 .products article {
@@ -1281,13 +1281,58 @@ a img {
 .pagination ul {
 	display: flex;
 	justify-content: flex-end;
+
 	width: 1146px;
+	padding: 0;
 }
 
-.pagination li {
+/*.pagination a {
+	
+	width: 27px;
+	height: 27px;
+
+	color: black;
+	background: rgb(255, 255, 255);
+	border-radius: 50%;
+}*/
+
+.pagination a {
+	
+	width: 27px;
+	height: 27px;
+	margin-left: 2px;
+	padding: 2px 8px;
+
+	color: #ffffff;
 
 }
 
-.pagination li:nth-child(2) {
+.pagination .previos,
+.pagination .next {
+	background: inherit;
+}
+
+.pagination .previos {
+	opacity: 0.3;
+}
+
+.pagination .current {
 	color: #323232;
+	border-radius: 50%;
+	background: rgb(255, 255, 255);
+}
+
+.pagination .next {
+	padding-right: 0;
+}
+
+.pagination .item:hover {
+	background: rgba(255, 255, 255, 0.2);
+	border-radius: 50%;
+}
+
+.pagination .item:active {
+	color: #323232;
+	border-radius: 50%;
+	background: rgb(255, 255, 255);
 }

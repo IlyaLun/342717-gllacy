@@ -93,21 +93,24 @@ a img {
 }
 
 .main_menu a {
-	border-bottom: 1px solid rgba(255,255,255, 0.3)
-}
-
-.main_menu li {
 	padding: 5px 12px;
 }
 
-.main_menu .active {
+.main_menu span { /* Подчеркивание элементов .main_menu */
+	border-bottom: 1px solid rgba(255,255,255, 0.3);
+}
+
+.main_menu li {
+	padding: 0 12px 10px 0;
+}
+
+.main_menu .active > a {
 	color: rgb(255, 255, 255);
 	background: rgb(208, 112, 88);
 	border-radius: 15px;
 }
 
-.main_menu .active a,
-.main_logo a { /* Убрал подчеркивание у ссылки под пунктом Каталог и у ссылки с логотипом */
+.main_menu .active span {
 	border-bottom: none;
 }
 
@@ -120,17 +123,25 @@ a img {
 	position: relative;
 }
 
-.main_menu li:hover {
+.main_menu > ul > li > a:hover { /* Так наведение работает только на ссылки в main_menu*/
 	background: #f7f6f3;
+	color: #323232;
 	border-radius: 20px;
 }
 
-.main_menu li:hover a {
-	color: #323232;
-	text-decoration: none;
+.main_menu > ul > li:first-child > a:hover { /* Убрал бэкграунд при наведении у лого в странице каталога */
+	background: inherit;
 }
 
-.main_menu li:active {
+.main_menu > ul > li:first-child > a:active { /* Убрал тень при клике у лого в странице каталога */
+	box-shadow: none;
+}
+
+.main_menu a:hover span { /* Убирает подчеркивание при наведении у элементов меню*/ 
+	border-bottom: none;
+}
+
+.main_menu > ul > li > a:active {
 	box-shadow: inset 0 2px 2px rgba(102, 102, 102, 1);
 }
 
@@ -145,16 +156,20 @@ a img {
 	box-shadow: none;
 }
 
+.main_menu .main_logo a {
+	padding: 0;
+}
+
 /* Подменю при наведении на Каталог */
 
 .main_menu li:hover .sub_menu { /*Наведение на каталог и выпадающее меню */
 		display: block;
 }
 
-.sub_menu {
+.main_menu .sub_menu {
 		position: absolute;
 		top: 32px;
-		left: 0;
+		left: -8px;
 		z-index: 10;
 
 		display: none;
@@ -171,39 +186,40 @@ a img {
 		box-shadow: 0px 20px 20px 0px rgba(0, 0, 0, 0.4);
 }
 
-.sub_menu li {
+.main_menu .sub_menu li {
 		margin: 0;
 		padding: 9px 20px;
 }
 
-.sub_menu li:first-child {
+.main_menu .sub_menu li:first-child {
 		font-family: "RobotoBold", "Arial", sans-serif;
 		border-bottom: 1px solid #d1d0ce;
 }
 
-.sub_menu li:first-child:hover {
+.main_menu .sub_menu li:first-child:hover {
 	border-radius: 5px;
 	border-bottom-left-radius: 0;
 	border-bottom-right-radius: 0;
 }
 
-.sub_menu li:last-child:hover {
+.main_menu .sub_menu li:last-child:hover {
 	border-radius: 5px;
 	border-top-left-radius: 0;
 	border-top-right-radius: 0;
 }
 
-.sub_menu li:hover {
+.main_menu .sub_menu li:hover {
 	background: #fbded7;
 	border-radius: 0;
 }
 
-.sub_menu li:active {
+.main_menu .sub_menu li:active {
 	background: #f6b5a5;
 	box-shadow: none;
 }
 
-.sub_menu a {
+.main_menu .sub_menu a {
+	padding: 0;
 	color: #323232;
 	text-decoration: none;
 }
@@ -242,9 +258,11 @@ a img {
 
 .search_block {
 	position: relative;
+
 	width: 32px;
 	height: 32px;
 	margin: 0 0 0 10px;
+
 	background: #9db1a6 url("../img/header_sprite.png") no-repeat;
 	background-position: 2px -125px;
 	border-radius: 50%;

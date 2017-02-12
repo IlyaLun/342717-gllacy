@@ -259,16 +259,20 @@ a img {
 .search_block {
 	position: relative;
 
+	padding: 10px 0;
+}
+
+.search_block div {
 	width: 32px;
 	height: 32px;
 	margin: 0 0 0 10px;
 
 	background: #9db1a6 url("../img/header_sprite.png") no-repeat;
 	background-position: 2px -125px;
-	border-radius: 50%;
+	border-radius: 50%
 }
 
-.search_block:hover {
+.search_block div:hover {
 	width: 32px;
 	height: 32px;
 	background: #f8f7f4 url("../img/header_sprite.png") no-repeat;
@@ -279,8 +283,8 @@ a img {
 
 .search_block form {
 	position: absolute;
-	top: 32px;
-	right: 10px;
+	top: 51px;
+	right: 0;
 
 	display: none;
 	box-sizing: border-box;
@@ -297,8 +301,8 @@ a img {
 	box-sizing: border-box;
 	width: 311px;
 	height: 44px;
-
 	padding: 14px;
+
 	border: 1px solid #d3d3d2;
 	border-radius: 5px;
 }
@@ -307,20 +311,27 @@ a img {
 	display: block;
 }
 
+.entry_block {
+	padding: 10px 0;	
+}
+
 .entry_block .login {
+
 	font-family: "RobotoMedium", "Arial", sans-serif;
 	font-size: 14px;
 	line-height: 16px;
 
+	border-radius: 20px;
 	background: #9db1a6 url("../img/header_sprite.png") no-repeat;
 	background-position: 12px -63px;
-	border-radius: 20px;
+
 }
 
 .entry_block .login:hover {
 	color: #323232;
 	background: #f8f7f4 url("../img/header_sprite.png") no-repeat;
 	background-position: 12px -94px;
+	border-radius: 20px;
 }
 
 .entry_block {
@@ -330,7 +341,7 @@ a img {
 
 .entry_block form {
 	position: absolute;
-	top: 31px;
+	top: 51px;
 	right: 1px;
 	z-index: 20;
 
@@ -365,10 +376,15 @@ a img {
 	line-height: 24px;
 	color: #323232;
 	text-decoration: underline;
-	/*Не доверстал ссылки в одну колонку*/
+}
+
+.user_login div {
+	float: right;
+	width: 130px;
 }
 
 .entry_block .btn { /* Кнопка Войти в попапе Входа */
+	float: left;
 	padding: 10px 20px;
 
 	font-family: "RobotoBold", "Arial", sans-serif;
@@ -403,7 +419,10 @@ a img {
 }
 
 .basket_block {
+	position: relative;
+
 	margin: 0 0 0 10px;
+	padding: 10px 0;
 }
 
 .basket_block a {
@@ -412,8 +431,14 @@ a img {
 	line-height: 16px;
 
 	background: #9db1a6 url("../img/header_sprite.png") no-repeat;
-	background-position: 9px -32px;
+	background-position: 6px -32px;
 	border-radius: 20px;
+}
+
+.basket_block .basketful { /* Корзина с товарами */
+	color: #323232;
+	background: #f8f7f4 url("../img/header_sprite.png") no-repeat;
+	background-position: 6px 0;
 }
 
 /* Контактная информация (блок contact_info) */

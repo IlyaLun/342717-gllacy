@@ -53,7 +53,8 @@ a img {
 
 /* Главная обёртка */
 .wrapper {
-	background: #849d8f;
+	background: #849d8f /*url(../img/backgr_img_1.png) no-repeat*/;
+	background-position: top center;
 }
 
 .wrapper li {
@@ -123,7 +124,7 @@ a img {
 	position: relative;
 }
 
-.main_menu > ul > li > a:hover { /* Так наведение работает только на ссылки в main_menu*/
+.main_menu > ul > li:hover > a { /* Так наведение работает только на ссылки в main_menu*/
 	background: #f7f6f3;
 	color: #323232;
 	border-radius: 20px;
@@ -151,10 +152,10 @@ a img {
 	padding-top: 8px;
 }
 
-.main_menu .main_logo:hover {
-	background: none;
+/*.main_menu .main_logo:hover {
+	background: inherit;
 	box-shadow: none;
-}
+}*/
 
 .main_menu .main_logo a {
 	padding: 0;
@@ -272,13 +273,14 @@ a img {
 	border-radius: 50%
 }
 
-.search_block div:hover {
-	width: 32px;
-	height: 32px;
+.search_block:hover div {
 	background: #f8f7f4 url("../img/header_sprite.png") no-repeat;
-	background-position: 2px -154px;
-	border-radius: 50%;
+	background-position: 2px -154px;	border-radius: 50%;
 	cursor: pointer;
+}
+
+.search_block:hover form {
+	display: block;
 }
 
 .search_block form {
@@ -307,10 +309,6 @@ a img {
 	border-radius: 5px;
 }
 
-.search_block:hover form {
-	display: block;
-}
-
 .entry_block {
 	padding: 10px 0;	
 }
@@ -327,11 +325,10 @@ a img {
 
 }
 
-.entry_block .login:hover {
+.entry_block:hover .login {
 	color: #323232;
 	background: #f8f7f4 url("../img/header_sprite.png") no-repeat;
 	background-position: 12px -94px;
-	border-radius: 20px;
 }
 
 .entry_block {
@@ -556,6 +553,9 @@ a img {
 }
 
 .sliders {
+	/*position: relative;*/
+
+	/*width: 700px;*/
 	margin: 0 0 37px 0;
 	text-align: center;
 }
@@ -710,12 +710,16 @@ a img {
 
 	box-sizing: border-box;
 	width: 293px;
-	height: 400px;
+	min-height: 400px;
 	padding: 5px 13px;
 
 	border-radius: 5px;
 	background: rgba(255,255,255, 0.2);
 	box-shadow: 0px 20px 20px 0px rgba(0, 0, 0, 0.4);
+}
+
+.product_item:hover .price { /* Чтобы цена не пригала при наведении на карточку товара, костыль какой-то получается. */
+	top: 205px;
 }
 
 .product_item:hover > a .products_btn {
@@ -735,6 +739,10 @@ a img {
 
 	background: url("../img/hit.png") no-repeat;
 	border-radius: 50%;
+}
+
+.product_item > a {
+	/*position: relative;*/
 }
 
 .price {
@@ -1112,7 +1120,7 @@ a img {
 }
 
 .social_btn_twit:active {
-	background-position: -115px -4px;
+	box-shadow: inset 0 2px 1px 0 #9b9b9b;
 }
 
 .social_btn_inst {
@@ -1120,7 +1128,8 @@ a img {
 }
 
 .social_btn_inst:active {
-	background-position: -73px -4px;
+	box-shadow: inset 0 2px 1px 0 #9b9b9b;
+
 }
 
 .social_btn_fb {
@@ -1128,7 +1137,7 @@ a img {
 }
 
 .social_btn_fb:active {
-	background-position: -31px -4px;
+	box-shadow: inset 0 2px 1px 0 #9b9b9b;
 }
 
 .social_btn_vk {
@@ -1136,7 +1145,7 @@ a img {
 }
 
 .social_btn_vk:active {
-	background-position: -157px -4px;
+	box-shadow: inset 0 2px 1px 0 #9b9b9b;
 }
 
 .social_btn:hover {

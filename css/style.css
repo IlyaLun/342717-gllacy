@@ -130,7 +130,8 @@ a img {
 	border-radius: 20px;
 }
 
-.main_menu > ul > li:first-child > a:hover { /* Убрал бэкграунд при наведении у лого в странице каталога */
+.main_menu > ul > li:first-child > a:hover,
+.main_menu > ul > li:first-child:hover > a { /* Убрал бэкграунд при наведении у лого в странице каталога */
 	background: inherit;
 }
 

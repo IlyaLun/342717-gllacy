@@ -703,7 +703,7 @@ a img {
 	padding-bottom: 25px;
 }
 
-.product_item:hover > a {
+.product_item:hover a {
 	position: absolute;
 	top: -5px;
 	left: -13px;
@@ -719,7 +719,11 @@ a img {
 	box-shadow: 0px 20px 20px 0px rgba(0, 0, 0, 0.4);
 }
 
-.product_item:hover .price { /* Чтобы цена не пригала при наведении на карточку товара, костыль какой-то получается. */
+.product_item:hover span {
+	border-bottom: none;
+}
+
+.product_item:hover .price { /* Чтобы цена не прыгала при наведении на карточку товара, костыль какой-то получается. */
 	top: 205px;
 }
 
@@ -740,10 +744,6 @@ a img {
 
 	background: url("../img/hit.png") no-repeat;
 	border-radius: 50%;
-}
-
-.product_item > a {
-	/*position: relative;*/
 }
 
 .price {

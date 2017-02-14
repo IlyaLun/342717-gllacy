@@ -36,7 +36,11 @@ body {
 	font-family: "RobotoBold", "Arial", sans-serif;
 	line-height: 22px;
 	color: #ffffff;
-	background: #7d7c7c;
+	background: #849d8f;
+}
+
+body > input[type="radio"] {  /*Прячем инпуты, управляющие слайдами */
+	display: none;
 }
 
 a {
@@ -52,13 +56,24 @@ a img {
 /* Стилизуем index.html */
 
 /* Главная обёртка */
+
 .wrapper {
-	background: #849d8f /*url(../img/backgr_img_1.png) no-repeat*/;
-	background-position: top center;
+	transition: background-image 0.5s ease, background-color 0.5s ease;
 }
 
-.wrapper li {
-	list-style: none; /* Убрал маркер у всех li */
+.wrapper::before,
+.wrapper::after {
+	content: "";
+
+	visibility: hidden;
+}
+
+.wrapper::before {
+	background: url("../img/backgr_img_2.png");
+}
+
+.wrapper::after {
+	background: url("../img/backgr_img_2.png");
 }
 
 /* Для центровщика */
@@ -103,12 +118,18 @@ a img {
 
 .main_menu li {
 	padding: 0 12px 10px 0;
+	list-style: none;
 }
 
 .main_menu .active > a {
 	color: rgb(255, 255, 255);
 	background: rgb(208, 112, 88);
 	border-radius: 15px;
+}
+
+.main_menu .active:hover > a { /* Чтобы стиль при наведении оставался неизменным в catalo.html */
+	color: rgb(255, 255, 255);
+	background: rgb(208, 112, 88);
 }
 
 .main_menu .active span {
@@ -153,11 +174,6 @@ a img {
 	padding-top: 8px;
 }
 
-/*.main_menu .main_logo:hover {
-	background: inherit;
-	box-shadow: none;
-}*/
-
 .main_menu .main_logo a {
 	padding: 0;
 }
@@ -168,7 +184,7 @@ a img {
 		display: block;
 }
 
-.main_menu .sub_menu {
+.sub_menu {
 		position: absolute;
 		top: 32px;
 		left: -8px;
@@ -188,42 +204,51 @@ a img {
 		box-shadow: 0px 20px 20px 0px rgba(0, 0, 0, 0.4);
 }
 
-.main_menu .sub_menu li {
+.sub_menu li {
 		margin: 0;
 		padding: 9px 20px;
 }
 
-.main_menu .sub_menu li:first-child {
+.sub_menu .sub_active, /* Выделение цветом активного элемента сабменю*/
+.sub_menu .sub_active:hover,
+.sub_menu .sub_active:active {
+	background: #d07058;
+}
+
+.sub_menu li:first-child {
 		font-family: "RobotoBold", "Arial", sans-serif;
 		border-bottom: 1px solid #d1d0ce;
 }
 
-.main_menu .sub_menu li:first-child:hover {
+.sub_menu li:first-child:hover {
 	border-radius: 5px;
 	border-bottom-left-radius: 0;
 	border-bottom-right-radius: 0;
 }
 
-.main_menu .sub_menu li:last-child:hover {
+.sub_menu li:last-child:hover {
 	border-radius: 5px;
 	border-top-left-radius: 0;
 	border-top-right-radius: 0;
 }
 
-.main_menu .sub_menu li:hover {
+.sub_menu li:hover {
 	background: #fbded7;
 	border-radius: 0;
 }
 
-.main_menu .sub_menu li:active {
+.sub_menu li:active {
 	background: #f6b5a5;
 	box-shadow: none;
 }
 
-.main_menu .sub_menu a {
+.sub_menu a {
 	padding: 0;
 	color: #323232;
-	text-decoration: none;
+}
+
+.sub_active a {
+	color: white;
 }
 
 /* Юзерблок Поиск, Вход и Корзина */
@@ -236,7 +261,8 @@ a img {
 }
 
 .user_block input:focus {
-	border: 2px solid rgb(46, 136, 228);
+	padding-left: 13px;
+	border: 2px solid rgba(46, 136, 228, 0.5);
 	outline: none; /* Убирает синюю рамку в Chrome*/
 }
 
@@ -269,7 +295,7 @@ a img {
 	height: 32px;
 	margin: 0 0 0 10px;
 
-	background: #9db1a6 url("../img/header_sprite.png") no-repeat;
+	background: rgba(255, 255, 255, 0.2) url("../img/header_sprite.png") no-repeat;
 	background-position: 2px -125px;
 	border-radius: 50%
 }
@@ -277,7 +303,6 @@ a img {
 .search_block:hover div {
 	background: #f8f7f4 url("../img/header_sprite.png") no-repeat;
 	background-position: 2px -154px;	border-radius: 50%;
-	cursor: pointer;
 }
 
 .search_block:hover form {
@@ -321,7 +346,7 @@ a img {
 	line-height: 16px;
 
 	border-radius: 20px;
-	background: #9db1a6 url("../img/header_sprite.png") no-repeat;
+	background: rgba(255, 255, 255, 0.2) url("../img/header_sprite.png") no-repeat;
 	background-position: 12px -63px;
 
 }
@@ -360,6 +385,7 @@ a img {
 .entry_block input {
 	box-sizing: border-box;
 	width: 100%;
+	height: 44px;
 	margin-bottom: 20px;
 	padding: 14px;
 
@@ -428,7 +454,7 @@ a img {
 	font-size: 14px;
 	line-height: 16px;
 
-	background: #9db1a6 url("../img/header_sprite.png") no-repeat;
+	background: rgba(255, 255, 255, 0.2) url("../img/header_sprite.png") no-repeat;
 	background-position: 6px -32px;
 	border-radius: 20px;
 }
@@ -548,26 +574,83 @@ a img {
 
 /* Стилизуем main */
 /* Блок со слайдерами */
-#second_slide,
-#third_slide {
-	display: none;
-}
 
 .sliders {
-	/*position: relative;*/
+	position: relative;
 
-	/*width: 700px;*/
-	margin: 0 0 37px 0;
+	margin: 0 0 40px 0;
+
 	text-align: center;
+	color: #ffffff;
+}
+
+.slide_title {
+	width: 700px;
+	margin: 0 auto;
+	margin-bottom: 30px;
+	padding-top: 270px;	
+
+	font-size: 60px;
+	line-height: 60.35px;
+}
+
+/*.sliders h2 {
+	width: 700px;
+	padding-top: 270px;
+	font-size: 60px;
+	line-height: 60.35px;
+}*/
+
+.slide_switch { /* Спозиционировали блок с кнопками переключения слайдов*/
+	position: absolute;
+	bottom: 25px;
+	left: 0;
+	z-index: 20;
+
+	font-size: 0;
+}
+
+.slide_switch label { /* Нарисовали кнопки переключения слайдов */
+	display: inline-block;
+	width: 17px;
+	height: 17px;
+	margin-right: 8px;
+
+	vertical-align: top;
+
+	background: transparent;
+	border: 2px solid #ffffff;
+	border-radius: 50%;
+
+	cursor: pointer;
 }
 
 .slide {
-	padding: 205px 0 0 0;
+	display: none;
 }
 
-.sliders h2 {
-	font-size: 60px;
-	line-height: 60.35px;
+#first_slide:checked ~ .wrapper #slide1, /* Отображаем название слайда*/
+#second_slide:checked ~ .wrapper #slide2,
+#third_slide:checked ~ .wrapper #slide3 {
+	display: block;
+}
+
+#first_slide:checked ~ .wrapper label[for="first_slide"], /* Заливам фон у кнопок-переключаетелей слайдов */
+#second_slide:checked ~ .wrapper label[for="second_slide"],
+#third_slide:checked ~ .wrapper label[for="third_slide"] {
+	background: #ffffff;
+}
+
+#first_slide:checked ~ .wrapper {
+	background: #849d8f url("../img/backgr_img_1.png") no-repeat top center;
+}
+
+#second_slide:checked ~ .wrapper {
+	background: #8996a6 url("../img/backgr_img_2.png") no-repeat top center;
+}
+
+#third_slide:checked ~ .wrapper {
+	background: #9d8b84 url("../img/backgr_img_3.png") no-repeat top center;
 }
 
 .sliders a {
@@ -685,11 +768,13 @@ a img {
 
 /* Карточки товаров */
 .products {
+
 	display: flex;
-	justify-content: space-between;
+	justify-content: space-around;
 	flex-wrap: wrap;
 	align-items: top;
-	margin-bottom: 45px;
+
+	margin-bottom: -42px;
 }
 
 .products article {
@@ -698,45 +783,49 @@ a img {
 	word-wrap: break-word;
 }
 
-.product_item {
+.product_item > a {
 	position: relative;
-	padding-bottom: 25px;
+	display: block;
+	box-sizing: border-box;
+	width: 293px;
+	padding: 10px 13px;
+	padding-bottom: 69px;
+	border-radius: 5px;
 }
 
 .product_item:hover a {
-	position: absolute;
-	top: -5px;
-	left: -13px;
-	z-index: 9;
 
-	box-sizing: border-box;
-	width: 293px;
-	min-height: 400px;
-	padding: 5px 13px;
-
-	border-radius: 5px;
-	background: rgba(255,255,255, 0.2);
+	background: rgba(255,255,255,0.2);
 	box-shadow: 0px 20px 20px 0px rgba(0, 0, 0, 0.4);
-}
-
-.product_item:hover span {
-	border-bottom: none;
-}
-
-.product_item:hover .price { /* Чтобы цена не прыгала при наведении на карточку товара, костыль какой-то получается. */
-	top: 205px;
 }
 
 .product_item:hover > a .products_btn {
 	display: block;
 }
 
+.product_title {
+	margin: 9px 0;
+	font-family: "Roboto Medium", "Arial", sans-serif;
+}
+
+.product_title span { /* Подчеркивание наименований внутри класса .product_title */
+	border-bottom: 1px solid rgba(255,255,255, 0.3);
+}
+
+.product_item:hover span {
+	border-bottom: none;
+}
+
+.container.wrap {
+	padding: 0 26px 0 2px;
+}
+
 /* Иконка хита */
-.product_hit::before {
+.product_hit > a::before {
 	content: "";
 	position: absolute;
-	top: 0;
-	left: 0;
+	top: 10px;
+	left: 13px;
 	z-index: 10;
 
 	width: 61px;
@@ -748,7 +837,7 @@ a img {
 
 .price {
 	position: absolute;
-	top: 200px;
+	top: 220px;
 
 	margin: 0;
 
@@ -790,20 +879,6 @@ a img {
 	background: -webkit-linear-gradient(top, #d84732 0%, #e1613e 100%);
 	background:         linear-gradient(to bottom, #d84732 0%, #e1613e 100%);
 	box-shadow: inset 0 2px 2px rgba(172, 16, 0, 1);
-}
-
-.product_title {
-	margin: 9px 0;
-	font-family: "Roboto Medium", "Arial", sans-serif;
-}
-
-.product_title span { /* Подчеркивание наименований внутри класса .product_title */
-	border-bottom: 1px solid rgba(255,255,255, 0.3);
-}
-
-.product_title span:hover {
-	color: #ffbc9e;
-	border-bottom: none;
 }
 
 .kg {
@@ -945,6 +1020,7 @@ a img {
 .emailing_news_wrapper input {
 	box-sizing: border-box;
 	width: 348px;
+	height: 44px;
 	margin-right: 5px;
 	padding: 12px 14px;
 	border: 1px solid #d3d3d2;
@@ -952,7 +1028,8 @@ a img {
 }
 
 .emailing_news_wrapper input:focus {
-	border: 2px solid rgb(46, 136, 228);
+	padding-left: 13px;
+	border: 2px solid rgba(46, 136, 228, 0.5);
 	outline: none; /* Убирает синюю рамку в Chrome*/
 }
 
@@ -1052,6 +1129,35 @@ a img {
 .location_info .location_shedule {
 	line-height: 22px;
 }
+
+.form_feedback {
+	width: 318px;
+	height: 277px;
+
+	border-radius: 10px;
+	background: rgb(248, 247, 244);
+	
+}
+
+.form_feedback input {
+
+}
+
+.Поле_ввода_copy {
+  border-style: solid;
+  border-width: 1px;
+  border-color: rgb(178, 178, 178);
+  border-radius: 5px;
+  background-color: rgb(255, 255, 255);
+  opacity: 0.52;
+  position: absolute;
+  left: 857px;
+  top: 2422px;
+  width: 269px;
+  height: 46px;
+  z-index: 15;
+}
+
 
 .feedback_btn {
 	width: 100%;
@@ -1242,6 +1348,8 @@ a img {
 	position: relative;
 
 	margin-right: 20px;
+
+	list-style: none;
 }
 
 .breadcrumbs li::after {
@@ -1283,6 +1391,8 @@ a img {
 }
 
 .pagination {
+	margin-top: 49px;
+
 	font-family: "RobotoMedium", "Arial", sans-serif;
 	line-height: 18px;
 	border-bottom: 1px solid rgba(255,255,255,0.3);
@@ -1294,17 +1404,10 @@ a img {
 
 	width: 1146px;
 	padding: 0;
+
+	list-style: none;
 }
 
-/*.pagination a {
-	
-	width: 27px;
-	height: 27px;
-
-	color: black;
-	background: rgb(255, 255, 255);
-	border-radius: 50%;
-}*/
 
 .pagination a {
 	

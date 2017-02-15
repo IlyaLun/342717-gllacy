@@ -133,54 +133,73 @@
 
 						<div class="filters_form_sorting">
 
-							<label for="sorting">Сортировка:</label>
+							<div class="form_block">
 
-							<select name="sorting" id="sorting">
-								<option value="1">по популярности</option>
-								<option value="2">по цене</option>
-							</select>
+								<p><label for="sorting">Сортировка:</label></p>
 
-							<label for="pricecount">Цена: 100 руб. - 500 руб.</label>
+								<select name="sorting" id="sorting">
+									<option value="1">по популярности</option>
+									<option value="2">по цене</option>
+								</select>
+
+							</div>
+
+							<div class="form_block">
+
+								<p><label for="pricecount">Цена: 100 руб. - 500 руб.</label></p>
 								<input type="range" name="price" id="pricecount" multiple="2" min="100" max="500">
-							<label>Жирность:</label>
 
-							<label>
-								<input type="radio" name="fatness" value="1">0%
-							</label>
+							</div>
 
-							<label>
-								<input type="radio" name="fatness" value="2" checked>до 10%
-							</label>
+							<div class="form_block">
+								
+								<p><label>Жирность:</label></p>
 
-							<label>
-								<input type="radio" name="fatness" value="3">до 30%
-							</label>
+								<fieldset class="radio">
+									<label>
+										<input type="radio" name="fatness" value="1">0%
+									</label>
 
-							<label>
-								<input type="radio" name="fatness" value="4">выше 30%
-							</label>
+									<label>
+										<input type="radio" name="fatness" value="2" checked>до 10%
+									</label>
 
-							<label>Наполнители:</label>
+									<label>
+										<input type="radio" name="fatness" value="3">до 30%
+									</label>
 
-							<label>
-								<input type="checkbox" name="choclate" checked>шоколадные
-							</label>
+									<label>
+										<input type="radio" name="fatness" value="4">выше 30%
+									</label>
+								</fieldset>
 
-							<label>
-								<input type="checkbox" name="sugar" checked>сахарные присыпки
-							</label>
+							</div>
 
-							<label>
-								<input type="checkbox" name="fruit">фрукты
-							</label>
+							<div class="form_block">
 
-							<label>
-								<input type="checkbox" name="syrup">сиропы
-							</label>
+								<p><label>Наполнители:</label></p>
 
-							<label>
-								<input type="checkbox" name="jams">джемы
-							</label>
+								<label>
+									<input type="checkbox" name="choclate" checked>шоколадные
+								</label>
+
+								<label>
+									<input type="checkbox" name="sugar" checked>сахарные присыпки
+								</label>
+
+								<label>
+									<input type="checkbox" name="fruit">фрукты
+								</label>
+
+								<label>
+									<input type="checkbox" name="syrup">сиропы
+								</label>
+
+								<label>
+									<input type="checkbox" name="jams">джемы
+								</label>
+
+							</div>
 
 							<button type="submit">Применить</button>
 

@@ -1340,7 +1340,9 @@ a img {
 /* Хлебные крошки в header */
 .breadcrumbs ul {
 	display: flex;
-
+	
+	margin-top: 20px;
+	margin-bottom: 0;
 	padding: 0;
 }
 
@@ -1382,12 +1384,70 @@ a img {
 
 /* main */
 .page_title {
+	margin: 0;
+	margin-bottom: 11px;
 	font-size: 35px;
 	line-height: 41px;
 }
 
+/*Стили для фильтра*/
+
 .filters {
 	margin-bottom: 40px;
+}
+
+.filters_form {
+	font-family: "RobotoMedium", "Arial", sans-serif;
+	font-size: 14px;
+	line-height: 16px;
+
+}
+
+.filters_form select {
+	padding: 8px 11px;
+	padding-right: 46px;
+
+	font: inherit;
+	color: inherit;
+
+	background: rgba(248, 247, 244, 0.2);
+	border-radius: 25px;
+
+	outline: none;
+}
+
+.filters_form .radio {
+	padding: 8px 11px;
+
+	background: rgba(248, 247, 244, 0.2);
+	border-radius: 25px;
+	border: none;
+
+}
+
+.filters_form {
+	display: block;
+}
+
+.form_block {
+	display: inline-block;
+	vertical-align: top;
+
+	margin-right: 11px;
+}
+
+.form_block p {
+	margin-bottom: 7px;
+	padding-left: 15px;
+
+}
+
+.filters_form select:hover {
+
+	color: rgb(50, 50, 50);
+
+	background: rgb(255, 255, 255);
+
 }
 
 .pagination {

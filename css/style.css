@@ -778,7 +778,8 @@ a img {
 }
 
 .products article {
-	width: 267px;
+	min-width: 267px;
+	margin-top: -48px;
 	text-align: center;
 	word-wrap: break-word;
 }
@@ -794,9 +795,11 @@ a img {
 }
 
 .product_item:hover a {
+	z-index: 200;
 
 	background: rgba(255,255,255,0.2);
 	box-shadow: 0px 20px 20px 0px rgba(0, 0, 0, 0.4);
+
 }
 
 .product_item:hover > a .products_btn {
@@ -817,7 +820,7 @@ a img {
 }
 
 .container.wrap {
-	padding: 0 26px 0 2px;
+	padding: 0 13px;
 }
 
 /* Иконка хита */
@@ -1144,18 +1147,18 @@ a img {
 }
 
 .Поле_ввода_copy {
-  border-style: solid;
-  border-width: 1px;
-  border-color: rgb(178, 178, 178);
-  border-radius: 5px;
-  background-color: rgb(255, 255, 255);
-  opacity: 0.52;
-  position: absolute;
-  left: 857px;
-  top: 2422px;
-  width: 269px;
-  height: 46px;
-  z-index: 15;
+	border-style: solid;
+	border-width: 1px;
+	border-color: rgb(178, 178, 178);
+	border-radius: 5px;
+	background-color: rgb(255, 255, 255);
+	opacity: 0.52;
+	position: absolute;
+	left: 857px;
+	top: 2422px;
+	width: 269px;
+	height: 46px;
+	z-index: 15;
 }
 
 
@@ -1393,7 +1396,7 @@ a img {
 /*Стили для фильтра*/
 
 .filters {
-	margin-bottom: 40px;
+	margin-bottom: 80px;
 }
 
 .filters_form {
@@ -1403,17 +1406,44 @@ a img {
 
 }
 
-.filters_form select {
-	padding: 8px 11px;
-	padding-right: 46px;
+.filters_form select { /* Избавляемся от стандартной стрелки */
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
 
-	font: inherit;
+	padding: 8px 11px;
+
+	box-sizing: border-box;
+	width: 193px;
+	height: 36px;
+
+	font-size: 16px;
+	line-height: 18px;
 	color: inherit;
 
 	background: rgba(248, 247, 244, 0.2);
 	border-radius: 25px;
+	border-width: 0;
 
 	outline: none;
+}
+
+.filters_form select::-ms-expand {
+	display: none;
+}
+
+.filters_form .arrow::after {
+	position: absolute;
+	top: 52px;
+	right: 12px;
+
+	display: block;
+
+	border-top: 5px solid #ffffff;
+	border-right: 4px solid transparent;
+	border-left: 4px solid transparent;
+
+	content: "";
 }
 
 .filters_form .radio {
@@ -1423,13 +1453,23 @@ a img {
 	border-radius: 25px;
 	border: none;
 
+	overflow: hidden;
+
 }
+
+.radio label:last-child {  /*Чтобы в IE "30%"" переносилось на другую строку*/
+	padding-right: 0;
+}
+
+
 
 .filters_form {
 	display: block;
 }
 
 .form_block {
+	position: relative;
+
 	display: inline-block;
 	vertical-align: top;
 
@@ -1448,6 +1488,252 @@ a img {
 
 	background: rgb(255, 255, 255);
 
+}
+
+.filters_form .arrow:hover::after { /* Изменение цвета стрелки */
+	border-top: 5px solid black;
+}
+
+.radio input,
+.hidden { /* Прячем стоковые инпуты */
+	display: none;
+}
+
+.range_controls {
+	position: relative;
+
+	box-sizing: border-box;
+	width: 220px;
+	height: 36px;
+	padding: 16px 15px;
+
+	background: rgba(248, 247, 244, 0.2);
+	border-radius: 25px;
+}
+
+.range_controls .scale {
+	height: 4px;
+
+	background: #d7dcde;
+}
+
+.range_controls .bar {
+	width: 60%;
+	height: 4px;
+	margin-left: 17px;
+
+	background: #f8f7f4;
+}
+
+.range_controls .toggle {
+	position: absolute;
+	top: 7px;
+
+	width: 21px;
+	height: 22px;
+
+	background: rgb(248, 247, 244);
+	border-radius: 50%;
+	box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.1);
+
+	cursor: pointer;
+}
+
+.range_controls .toggle_min {
+	left: 32px;
+}
+
+.range_controls .toggle_max {
+	left: 130px;
+}
+
+/* Радиобатоны с жирностью */
+
+.radio {
+	box-sizing: border-box;
+	width: 415px;
+	height: 36px;
+}
+
+
+.radio label {
+	position: relative;
+
+	padding-left: 32px;
+	padding-right: 16px;
+
+	font-size: 16px;
+	line-height: 18px;
+
+	cursor: pointer;
+}
+
+.radio input[type="radio"] + label::before {
+	position: absolute;
+	top: 0;
+	left: 2px;
+
+	box-sizing: border-box;
+	width: 20px;
+	height: 20px;
+
+	border-radius: 50%;
+	border: 1px solid rgb(255, 255, 255);
+
+	content: "";
+	cursor: pointer;
+}
+
+.radio input[type="radio"]:checked + label::after {
+	position: absolute;
+	top: 4px;
+	left: 6px;
+
+	width: 12px;
+	height: 12px;
+
+	background: rgb(255, 255, 255);
+	border-radius: 50%;
+
+	content: "";
+}
+
+.radio input[type="radio"] + label:hover::before {
+	border-width: 2px;
+}
+
+.radio input[type="radio"]:disabled + label::before,
+.radio input[type="radio"]:disabled + label:hover::before {
+	border: 1px solid rgba(248, 247, 244, 0.4);
+	cursor: default;
+}
+
+.radio input[type="radio"]:disabled + label {
+	color: rgba(248, 247, 244, 0.4);
+	cursor: default;
+}
+
+/* Наполнители */
+
+.checkbox {
+	box-sizing: border-box;
+	width: 702px;
+	height: 36px;
+	padding-left: 14px;
+
+	background: rgba(255, 255, 255, 0.2);
+	border-radius: 25px;
+	border: none;
+}
+
+input[type="checkbox"] { /*Скрыли стандартные чб*/
+	display: none;
+}
+
+input[type="checkbox"] + label {
+	position: relative;
+	
+	display: inline-block;
+	padding-left: 30px;
+	padding-right: 18px;
+
+	font-size: 16px;
+	line-height: 25px;
+	
+	vertical-align: top;
+	cursor: pointer;	
+}
+
+input[type="checkbox"] + label::before { /* Квадратик */
+	position: absolute;
+	top: 2px;
+	left: 0;
+
+	width: 18px;
+	height: 18px;
+
+	border: 1px solid rgb(255, 255, 255);
+	border-radius: 5px;
+
+	content: "";
+}
+
+input[type="checkbox"] + label:hover::before { /* Наведение */
+	width: 16px;
+	height: 16px;
+	border-width: 2px;
+}
+
+input[type="checkbox"]:disabled + label::before, /* Отключенный чб */
+input[type="checkbox"]:disabled + label:hover::before { 
+	width: 19px;
+	height: 19px;
+	border: 1px solid rgba(248, 247, 244, 0.4);
+	cursor: default;
+}
+
+input[type="checkbox"]:disabled + label {
+	color: rgba(248, 247, 244, 0.4);
+	cursor: default;
+}
+
+input[type="checkbox"]:checked + label::after { /* Галочка */ 
+	position: absolute;
+	top: 6px;
+	left: 3px;
+
+	width: 11px;
+	height: 6px;
+	transform: rotate(-45deg);
+
+	border-bottom: solid 2px #f8f7f4;
+	border-left: solid 2px #f8f7f4;
+	border-radius: 0;
+	
+	content: "";
+}
+
+.filters_form button {
+	box-sizing: border-box;
+	width: 144px;
+	height: 36px;
+	margin-top: 37px;
+
+	font-family: "RobotoMedium", "Arial", sans-serif;
+	font-size: 16px;
+	line-height: 18px;
+	color: #ffffff;
+
+	border: 2px solid rgb(255, 255, 255);
+	background: rgba(255, 255, 255, 0.2);
+	border-radius: 25px;
+
+	cursor: pointer;
+	outline: none;
+}
+
+.filters_form button:hover {
+	background: rgb(255, 255, 255);
+	color: rgb(50, 50, 50);
+}
+
+.filters_form button:active {
+	border-width: 0;
+	background-color: rgb(237, 237, 237);
+	box-shadow: inset 0px 2px 1px 0px rgba(105, 105, 105, 0.4);
+	outline: none;
+}
+
+
+.Подложка {
+	background-color: rgb(237, 237, 237);
+	box-shadow: inset 0px 2px 1px 0px rgba(105, 105, 105, 0.004);
+	position: absolute;
+	left: 833px;
+	top: 2314px;
+	width: 179px;
+	height: 37px;
+	z-index: 63;
 }
 
 .pagination {

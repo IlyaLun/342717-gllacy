@@ -693,7 +693,7 @@ a img {
 .promo_wrapper {
 	display: flex;
 	justify-content: space-between;
-	margin: 0 0 40px 0;
+	margin: 0 0 80px 0;
 	font-size: 18px;
 	line-height: 22px;
 } 
@@ -1080,12 +1080,42 @@ a img {
 	margin: 0 0 35px 0;
 }
 
-/* Блок с картой*/
-.location .form_feedback {
-	position: absolute;
+/* Модалка */ 
 
-	display: none;
+.location .form_feedback {
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 500;
+
+	/*display: none;*/
+	box-sizing: border-box;
+	width: 438px;
+	height: 443px;
+	padding: 20px 25px 25px 25px;
+
+
+	border-radius: 10px;
+	background: rgb(248, 247, 244);
+	
 }
+
+.location .form_feedback p {
+	margin: 0;
+	margin-bottom: 15px;
+}
+
+.form_feedback input[type="text"],
+.form_feedback input[type="email"] {
+	box-sizing: border-box;
+	width: 268px;
+	height: 45px;
+	
+	margin: 10px 0;
+
+}
+
+/* Блок с картой*/
 
 .location {
 	position: relative;
@@ -1132,35 +1162,6 @@ a img {
 .location_info .location_shedule {
 	line-height: 22px;
 }
-
-.form_feedback {
-	width: 318px;
-	height: 277px;
-
-	border-radius: 10px;
-	background: rgb(248, 247, 244);
-	
-}
-
-.form_feedback input {
-
-}
-
-.Поле_ввода_copy {
-	border-style: solid;
-	border-width: 1px;
-	border-color: rgb(178, 178, 178);
-	border-radius: 5px;
-	background-color: rgb(255, 255, 255);
-	opacity: 0.52;
-	position: absolute;
-	left: 857px;
-	top: 2422px;
-	width: 269px;
-	height: 46px;
-	z-index: 15;
-}
-
 
 .feedback_btn {
 	width: 100%;

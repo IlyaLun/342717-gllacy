@@ -164,7 +164,7 @@ a img {
 }
 
 .main_menu .main_logo {
-	margin-right: 17px;
+	margin-right: 10px;
 	padding: 0;
 	padding-top: 8px;
 }
@@ -403,6 +403,7 @@ a img {
 }
 
 .entry_block input:hover { /* Наведение на инпут*/
+	padding-top: 13px;
 	padding-left: 13px;
 	border: 2px solid rgba(154, 154, 154, 0.5);
 }

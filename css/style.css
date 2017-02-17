@@ -61,7 +61,7 @@ a img {
 	transition: background-image 0.5s ease, background-color 0.5s ease;
 }
 
-.wrapper::before,
+.wrapper::before, /* Чтобы сразу загрузились все мороженки из слайдера */
 .wrapper::after {
 	content: "";
 
@@ -117,7 +117,7 @@ a img {
 }
 
 .main_menu li {
-	padding: 5px;
+	padding: 8px 5px 7px 5px;
 	list-style: none;
 }
 
@@ -164,9 +164,9 @@ a img {
 }
 
 .main_menu .main_logo {
-	margin-right: 10px;
-	padding: 0;
-	padding-top: 8px;
+	height: 64px;
+	margin: 0 8px 0 -2px;
+	padding: 8px 0 0 0;
 }
 
 .main_menu .main_logo a {
@@ -255,18 +255,17 @@ a img {
 	width: 293px;
 }
 
-.user_block .login,
-.user_block .basket_block > a {
-	display: block;
-	width: 92px;
-	height: 16px;
-	padding: 8px 0 8px 15px;
-	text-align: center;
-	text-decoration: none;
+.user_block .login {
+
+	padding: 8px 17px 8px 44px;
+
 }
 
 .user_block .basket_block > a {
-	padding-left: 20px;
+	display: block;
+	box-sizing: border-box;
+	min-width: 117px;
+	padding: 8px 17px 8px 44px;
 }
 
 .basket_block form {
@@ -285,13 +284,13 @@ a img {
 	margin: 0 0 0 10px;
 
 	background: rgba(255, 255, 255, 0.2) url("../img/header_sprite.png") no-repeat;
-	background-position: 2px -125px;
+	background-position: 1px -125px;
 	border-radius: 50%
 }
 
 .search_block:hover div {
 	background: #f8f7f4 url("../img/header_sprite.png") no-repeat;
-	background-position: 2px -154px;	border-radius: 50%;
+	background-position: 1px -154px;	border-radius: 50%;
 }
 
 .search_block:hover form {
@@ -344,7 +343,7 @@ a img {
 }
 
 .entry_block {
-	padding: 10px 0;	
+	padding: 10px 0;
 }
 
 .entry_block .login {
@@ -355,14 +354,14 @@ a img {
 
 	border-radius: 20px;
 	background: rgba(255, 255, 255, 0.2) url("../img/header_sprite.png") no-repeat;
-	background-position: 12px -63px;
+	background-position: 10px -63px;
 
 }
 
 .entry_block:hover .login {
 	color: #323232;
 	background: #f8f7f4 url("../img/header_sprite.png") no-repeat;
-	background-position: 12px -94px;
+	background-position: 10px -94px;
 }
 
 .entry_block {
@@ -372,7 +371,7 @@ a img {
 
 .entry_block form {
 	position: absolute;
-	top: 51px;
+	top: 42px;
 	right: 1px;
 	z-index: 20;
 
@@ -486,14 +485,14 @@ a img {
 	line-height: 16px;
 
 	background: rgba(255, 255, 255, 0.2) url("../img/header_sprite.png") no-repeat;
-	background-position: 6px -32px;
+	background-position: 8px -32px;
 	border-radius: 20px;
 }
 
 .basket_block .basketful { /* Корзина с товарами */
 	color: #323232;
 	background: #f8f7f4 url("../img/header_sprite.png") no-repeat;
-	background-position: 6px 0;
+	background-position: 8px 0;
 }
 
 .order {
@@ -591,7 +590,7 @@ a img {
 /* Контактная информация (блок contact_info) */
 
 .schedule {
-	margin: 0;
+	margin: 0 0 5px 0;
 	font-size: 14px;
 	line-height: 16px;
 	text-align: right;

@@ -12,8 +12,6 @@
 
 <body>
 
-	<!-- <div class="wrapper"> -->
-
 		<header>
 
 			<div class="container">
@@ -43,20 +41,23 @@
 
 						<div class="search_block">
 							<div></div>
-							<form action="https://echo.htmlacademy.ru" name="search-form">
-								<input type="search" name="search" value="" placeholder="Что ищем?">
+							<form class="search" action="https://echo.htmlacademy.ru" name="search_form">
+								<input type="search" name="search" value="" id="search" placeholder="Что ищем?">
+								<label class="placehold placehold_search" for="search">Что ищем?</label>
 							</form>
 						</div>
 
 						<div class="entry_block">
 							<a class="login" href="#">Вход</a>
 							<form class="user_login" action="https://echo.htmlacademy.ru" name="form_login" method="post">
-								<input type="email" name="email" value="" placeholder="Электронная почта">
-								<input type="password" name="password" value="" placeholder="Пароль">
-								<button type="submit" class="btn">Войти</button>
+								<input type="email" name="email" value="" id="email" placeholder="Электронная почта" required>
+								<label class="placehold placehold_email" for="email">Электронная почта</label>
+								<input type="password" name="password" value="" id="password" placeholder="Пароль" required>
+								<label class="placehold placehold_password" for="password">Пароль</label>
+								<button class="btn" type="submit">Войти</button>
 								<div>
-										<a href="#">Забыли пароль?</a>
-										<a href="#">Новая регистрация</a>
+									<a href="#">Забыли пароль?</a>
+									<a href="#">Новая регистрация</a>
 								</div>
 							</form>
 						</div>

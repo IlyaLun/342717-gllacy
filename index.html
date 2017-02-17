@@ -6,7 +6,7 @@
 	<meta charset="utf-8">
 	<title>HTML Academy: Глейси</title>
 	<link rel="stylesheet" href="css/normalize.css">
-	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/stdyle.css">
 
 </head>
 
@@ -59,7 +59,7 @@
 								<input type="email" name="email" value="" id="email" placeholder="Электронная почта" required>
 								<label class="placehold placehold_email" for="email">Электронная почта</label>
 								<input type="password" name="password" value="" id="password" placeholder="Пароль" required>
-								<label class="placehold placehold_password">Пароль</label>
+								<label class="placehold placehold_password" for="password">Пароль</label>
 								<button class="btn" type="submit">Войти</button>
 								<div>
 									<a href="#">Забыли пароль?</a>
@@ -224,8 +224,8 @@
 						<div class="emailing_news_wrapper">
 							<p>Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)</p>
 							<form action="https://echo.htmlacademy.ru" name="email_subscribe">
-								<input type="email" name="email" id="email2" placeholder="Электронная почта">
-								<label class="placehold placehold_email2" id="email2">Элекстронная почта</label>
+								<input type="email" name="email" id="email_subscribe" placeholder="Электронная почта">
+								<label class="placehold placehold_email2" for="email_subscribe">Элекстронная почта</label>
 								<button class="subscribe_btn" type="submit">Отправить</button>
 							</form>
 						</div>
@@ -245,16 +245,6 @@
 					<span class="location_shedule">(с 10 до 20 ежедневно)</span>
 					<input class="feedback_btn" type="button" name="btn_feedback" value="Форма обратной связи">
 				</div>
-
-		<!-- 		<div class="form_feedback">
-					<form class="feedback" action="https://echo.htmlacademy.ru" name="feedback" method="post">
-						<p>Мы обязательно вам ответим!</p>
-						<input type="text" name="name" placeholder="Как вас зовут?">
-						<input type="email" name="email" placeholder="Ваша почта для ответа?">
-						<input class="textarea" type="text" name="textarea" placeholder="Напишите что-нибудь">
-						<button type="submit">Отправить</button>
-					</form>
-				</div> -->
 
 			</section>	
 
@@ -301,8 +291,8 @@
 			
 			<input type="text" name="name" id="name" placeholder="Как вас зовут?">
 			<label class="placehold placehold1" for="name">Как Вас зовут?</label>
-			<input type="email" name="email" id="email" placeholder="Ваша почта для ответа?">
-			<label class="placehold placehold2" for="email">Ваша почта для ответа?</label>
+			<input type="email" name="email" id="email_feedback" placeholder="Ваша почта для ответа?">
+			<label class="placehold placehold2" for="email_feedback">Ваша почта для ответа?</label>
 			<textarea name="textarea" rows="8" cols="80" id="textarea" placeholder="Напишите что-нибудь"></textarea>
 			<label class="placehold placehold3" for="textarea">Напишите что-нибудь</label>
 			<button class="send" type="submit">Отправить</button>

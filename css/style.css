@@ -109,7 +109,7 @@ a img {
 }
 
 .main_menu a {
-	padding: 5px 12px;
+	padding: 5px 10px;
 }
 
 .main_menu span { /* Подчеркивание элементов .main_menu */
@@ -117,7 +117,7 @@ a img {
 }
 
 .main_menu li {
-	padding: 0 12px 10px 0;
+	padding: 5px;
 	list-style: none;
 }
 
@@ -134,11 +134,6 @@ a img {
 
 .main_menu .active span {
 	border-bottom: none;
-}
-
-.main_menu > li:first-child {
-	margin-right: 24px;
-	padding: 0;
 }
 
 .main_menu li:nth-child(2) {

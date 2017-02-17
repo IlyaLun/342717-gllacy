@@ -56,8 +56,10 @@
 						<div class="entry_block">
 							<a class="login" href="#">Вход</a>
 							<form class="user_login" action="https://echo.htmlacademy.ru" name="form_login" method="post">
-								<input type="email" name="email" value="" placeholder="Электронная почта" required>
-								<input type="password" name="password" value="" placeholder="Пароль" required>
+								<input type="email" name="email" value="" id="email" placeholder="Электронная почта" required>
+								<label class="placehold placehold_email" for="email">Электронная почта</label>
+								<input type="password" name="password" value="" id="password" placeholder="Пароль" required>
+								<label class="placehold placehold_password">Пароль</label>
 								<button class="btn" type="submit">Войти</button>
 								<div>
 									<a href="#">Забыли пароль?</a>
@@ -222,7 +224,8 @@
 						<div class="emailing_news_wrapper">
 							<p>Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)</p>
 							<form action="https://echo.htmlacademy.ru" name="email_subscribe">
-								<input type="email" name="email" placeholder="Электронная почта">
+								<input type="email" name="email" id="email2" placeholder="Электронная почта">
+								<label class="placehold placehold_email2" id="email2">Элекстронная почта</label>
 								<button class="subscribe_btn" type="submit">Отправить</button>
 							</form>
 						</div>

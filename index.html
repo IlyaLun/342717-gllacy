@@ -216,7 +216,7 @@
 
 					<div class="blog_news">
 						<p>Новое в нашем блоге</p>
-						<a href="#">10 способов сервировки фруктовых щербетов к столу</a>
+						<a href="#">10 способов сервировки<br>фруктовых щербетов к<br>столу</a>
 					</div>
 
 					<div class="emailing_news">
@@ -237,8 +237,6 @@
 			</div>
 
 			<section class="location">
-
-				<!-- <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.59910436516!2d30.32089461636648!3d59.93879418187623!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywgMTkxMTg2!5e0!3m2!1sru!2sru!4v1487418072282" width="100%" height="430px" frameborder="0" style="border:0" allowfullscreen></iframe> -->
 
 				<div id="yandex_map"></div>
 
@@ -296,11 +294,11 @@
 		<form class="feedback" action="https://echo.htmlacademy.ru" name="feedback" method="post">
 			<p>Мы обязательно вам ответим!</p>
 			
-			<input type="text" name="name" id="name" placeholder="Как вас зовут?" required>
+			<input type="text" name="name" id="name" placeholder="Как вас зовут?">
 			<label class="placehold placehold1" for="name">Как Вас зовут?</label>
-			<input type="email" name="email" id="email_feedback" placeholder="Ваша почта для ответа?" required>
+			<input type="email" name="email" id="email_feedback" placeholder="Ваша почта для ответа?">
 			<label class="placehold placehold2" for="email_feedback">Ваша почта для ответа?</label>
-			<textarea name="textarea" rows="8" cols="80" id="textarea" placeholder="Напишите что-нибудь" required></textarea>
+			<textarea name="textarea" rows="8" cols="80" id="textarea" placeholder="Напишите что-нибудь"></textarea>
 			<label class="placehold placehold3" for="textarea">Напишите что-нибудь</label>
 			<button class="send" type="submit">Отправить</button>
 			<button class="feedback_close"></button>
@@ -310,26 +308,7 @@
 
 	<div class="modal_overlay"></div>
 
-	<script>
-		
-		var btn = document.querySelector(".feedback_btn");
-		var overlay = document.querySelector(".modal_overlay");
-		var popup = document.querySelector(".modal_feedback");
-		var close = document.querySelector(".feedback_close");
-
-		btn.addEventListener("click", function(event) {
-			event.preventDefault();
-			popup.classList.add("modal_feedback_show");
-			overlay.classList.add("modal_overlay_show");
-		})
-
-		close.addEventListener("click", function(event) {
-			event.preventDefault();
-			popup.classList.remove("modal_feedback_show");
-			overlay.classList.remove("modal_overlay_show");
-		});
-
-	</script>
+	<script src="js/script.js"></script>
 
 	<!-- <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?sid=RNS7B3HqaZG4mI8SZCD7_Es4P73mCekf&amp;height=430&amp;lang=ru_RU&amp;sourceType=constructor&amp;scroll=false&amp;id=yandex_map"></script> -->
 

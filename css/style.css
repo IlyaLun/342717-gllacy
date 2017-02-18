@@ -102,8 +102,6 @@ a img {
 .header_second_line {
 	display: flex;
 	justify-content: flex-end;
-
-	/*margin-bottom: 3px;*/
 }
 
 /* Главное меню навигации */
@@ -429,8 +427,13 @@ a img {
 	font-weight: 400;
 	font-size: 13px;
 	line-height: 24px;
-	color: #323232;
-	text-decoration: underline;
+	color: rgb(50, 50, 50);
+	border-bottom: 1px solid rgba(50, 50, 50, 0.3);
+}
+
+.user_login a:hover {
+	color: #e84d37;
+	border-bottom: 1px solid rgba(249,172,159, 0.3);
 }
 
 .user_login div {
@@ -1099,7 +1102,8 @@ a img {
 
 .emailing_news_wrapper input {
 	box-sizing: border-box;
-	width: 72%;
+	width: 368px;
+	height: 44px;
 	margin-right: 5px;
 	padding: 12px 14px;
 
@@ -1108,6 +1112,7 @@ a img {
 }
 
 .emailing_news input:hover {
+	padding-top: 11px;
 	padding-left: 13px;
 
 	border: 2px solid rgba(154, 154, 154, 0.5);
@@ -1222,7 +1227,7 @@ a img {
 	outline: none;
 }
 
-.modal_feedback_show { /* Доп класс для JS */
+.modal_feedback_show { /* Доп классы для JS */
 	display: block;
 }
 

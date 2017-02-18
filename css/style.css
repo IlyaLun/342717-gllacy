@@ -325,20 +325,19 @@ a img {
 	box-sizing: border-box;
 	width: 311px;
 	height: 44px;
-	padding: 14px;
+	padding: 0 14px;
 
 	border: 1px solid #d3d3d2;
 	border-radius: 5px;
 }
 
 .search_block input:hover { /* Наведение на инпут*/
-	padding-top: 13px;
 	padding-left: 13px;
 	border: 2px solid rgba(154, 154, 154, 0.5);
 }
 
 .search_block input:focus {
-	padding-left: 13px;
+	padding-left: 14px;
 	border: 2px solid rgba(46, 136, 228, 0.5);
 	outline: none;
 }
@@ -400,10 +399,11 @@ a img {
 
 .entry_block input {
 	box-sizing: border-box;
-	width: 100%;
+	width: 241px;
 	height: 44px;
 	margin-bottom: 20px;
-	padding: 14px;
+	/*padding: 14px;*/
+	padding-left: 14px;
 
 	background: rgb(255, 255, 255);
 	border: 1px solid rgb(211, 211, 210);
@@ -411,7 +411,7 @@ a img {
 }
 
 .entry_block input:hover { /* Наведение на инпут*/
-	padding-top: 13px;
+	/*padding-top: 13px;*/
 	padding-left: 13px;
 	border: 2px solid rgba(154, 154, 154, 0.5);
 }
@@ -992,7 +992,6 @@ a img {
 
 .introduction li:nth-child(2n) {
 	padding-right: 0;
-	/*padding-left: 74px;*/
 }
 
 .introduction li::before {
@@ -1105,20 +1104,20 @@ a img {
 	width: 368px;
 	height: 44px;
 	margin-right: 5px;
-	padding: 12px 14px;
+	padding: 0 14px;
 
 	border: 1px solid #d3d3d2;
 	border-radius: 5px;
 }
 
 .emailing_news input:hover {
-	padding-top: 11px;
 	padding-left: 13px;
 
 	border: 2px solid rgba(154, 154, 154, 0.5);
 }
 
 .emailing_news_wrapper input:focus {
+	padding-left: 14px;
 	border: 2px solid rgba(46, 136, 228, 0.5);
 	outline: none; /* Убирает синюю рамку в Chrome*/
 }
@@ -1202,29 +1201,30 @@ a img {
 
 .modal_feedback input[type="text"],
 .modal_feedback input[type="email"] {
-
 	box-sizing: border-box;
 	width: 268px;
 	height: 45px;
-	padding: 12px 14px;
-	
+	padding: 0 14px;
 	margin: 10px 0;
+
 	border: 1px solid rgb(178, 178, 178);
 	border-radius: 5px;
 }
 
-.modal_feedback input:hover,
-.modal_feedback textarea:hover {
-	padding-top: 11px;
+.modal_feedback input:hover {
 	padding-left: 13px;
 	border: 2px solid rgba(154, 154, 154, 0.5);
 }
 
 .modal_feedback input:focus,
 .modal_feedback textarea:focus {
-	padding-left: 13px;
+	padding-left: 14px;
 	border: 2px solid rgba(46, 136, 228, 0.5);
 	outline: none;
+}
+
+.modal_feedback textarea:focus {
+	padding-top: 14px;
 }
 
 .modal_feedback_show { /* Доп классы для JS */
@@ -1262,17 +1262,15 @@ textarea:focus:-ms-input-placeholder{
 }
 
 .modal_feedback textarea {
-
 	box-sizing: border-box;
-	width: 100%;
+	width: 428px;
 	height: 155px;
 	margin-top: 10px;
-	padding: 12px 14px;
+	padding: 14px;
 
 	resize: none;
 	border: 1px solid rgb(178, 178, 178);
 	border-radius: 10px;
-
 }
 
 .modal_feedback .send { /* Кнопка отправить */

@@ -19,10 +19,10 @@ close.addEventListener("click", function(event) { // При клике на кр
 	event.preventDefault();//Сбрасываются дефолтные действия при нажатии.
 	popup.classList.remove("modal_feedback_show");//У модалки удаляется ранее прописанный класс с display:block
 	overlay.classList.remove("modal_overlay_show");//У оверлея тоже удаляется ранее прописанный класс.
-})
-
-form.addEventListener("submit", function(event) {
-	event.preventDefault();
-	console.log(name.value);
-	console.log(email.value);
 });
+
+// form.addEventListener("submit", function(event) {
+// 	event.preventDefault();
+// 	console.log(name.value);
+// 	console.log(email.value);
+// });

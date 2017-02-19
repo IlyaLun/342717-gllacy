@@ -1,37 +1,37 @@
 @font-face {
-    font-family: 'Roboto'; /* Bold */
-    font-weight: 700;
-    font-style: normal;
+		font-family: 'Roboto'; /* Bold */
+		font-weight: 700;
+		font-style: normal;
 
-    src: url('../fonts/Roboto-Bold/Roboto-Bold.eot');
-    src: url('../fonts/Roboto-Bold/Roboto-Bold.eot?#iefix') format('embedded-opentype'),
-    url('../fonts/Roboto-Bold/Roboto-Bold.woff2') format('woff2'),
-    url('../fonts/Roboto-Bold/Roboto-Bold.woff') format('woff'),
-    url('../fonts/Roboto-Bold/Roboto-Bold.ttf') format('truetype');
+		src: url('../fonts/Roboto-Bold/Roboto-Bold.eot');
+		src: url('../fonts/Roboto-Bold/Roboto-Bold.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/Roboto-Bold/Roboto-Bold.woff2') format('woff2'),
+		url('../fonts/Roboto-Bold/Roboto-Bold.woff') format('woff'),
+		url('../fonts/Roboto-Bold/Roboto-Bold.ttf') format('truetype');
 }
 
 @font-face {
-    font-family: 'Roboto'; /* Medium */
-    font-weight: 500;
-    font-style: normal;
+		font-family: 'Roboto'; /* Medium */
+		font-weight: 500;
+		font-style: normal;
 
-    src: url('../fonts/Roboto-Medium/Roboto-Medium.eot');
-    src: url('../fonts/Roboto-Medium/Roboto-Medium.eot?#iefix') format('embedded-opentype'),
-    url('../fonts/Roboto-Medium/Roboto-Medium.woff2') format('woff2'),
-    url('../fonts/Roboto-Medium/Roboto-Medium.woff') format('woff'),
-    url('../fonts/Roboto-Medium/Roboto-Medium.ttf') format('truetype');
+		src: url('../fonts/Roboto-Medium/Roboto-Medium.eot');
+		src: url('../fonts/Roboto-Medium/Roboto-Medium.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/Roboto-Medium/Roboto-Medium.woff2') format('woff2'),
+		url('../fonts/Roboto-Medium/Roboto-Medium.woff') format('woff'),
+		url('../fonts/Roboto-Medium/Roboto-Medium.ttf') format('truetype');
 }
 
 @font-face {
-    font-family: 'Roboto'; /* Regular */
-    font-weight: 400;
-    font-style: normal;
+		font-family: 'Roboto'; /* Regular */
+		font-weight: 400;
+		font-style: normal;
 
-    src: url('../fonts/Roboto-Regular/Roboto-Regular.eot');
-    src: url('../fonts/Roboto-Regular/Roboto-Regular.eot?#iefix') format('embedded-opentype'),
-    url('../fonts/Roboto-Regular/Roboto-Regular.woff2') format('woff2'),
-    url('../fonts/Roboto-Regular/Roboto-Regular.woff') format('woff'),
-    url('../fonts/Roboto-Regular/Roboto-Regular.ttf') format('truetype');
+		src: url('../fonts/Roboto-Regular/Roboto-Regular.eot');
+		src: url('../fonts/Roboto-Regular/Roboto-Regular.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/Roboto-Regular/Roboto-Regular.woff2') format('woff2'),
+		url('../fonts/Roboto-Regular/Roboto-Regular.woff') format('woff'),
+		url('../fonts/Roboto-Regular/Roboto-Regular.ttf') format('truetype');
 }
 
 /* Стили для глобальных тегов ( Д.25: допускается стилизовать теги html, body, a, img.) */
@@ -89,9 +89,9 @@ a img {
 	width: 1200px;
 	margin: 0 auto;
 	padding: 0 27px;
-		-webkit-box-sizing: border-box;
-			-moz-box-sizing: border-box;
-				box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
 }
 
 /* header*/
@@ -193,30 +193,30 @@ a img {
 }
 
 .sub_menu {
-		position: absolute;
-		top: 37px;
-		left: -8px;
-		z-index: 10;
+	position: absolute;
+	top: 37px;
+	left: -8px;
+	z-index: 10;
 
-		display: none;
-		width: 143px;
-		margin: 0;
-		padding: 0;
+	display: none;
+	width: 143px;
+	margin: 0;
+	padding: 0;
 
-		font-family: "Roboto", "Arial", sans-serif;
-		font-weight: 400;
-		font-size: 14px;
-		line-height: 16px;
-		color: #ffffff;
+	font-family: "Roboto", "Arial", sans-serif;
+	font-weight: 400;
+	font-size: 14px;
+	line-height: 16px;
+	color: #ffffff;
 
-		background: rgb(248, 247, 244);
-		border-radius: 5px;
-		box-shadow: 0px 20px 20px 0px rgba(0, 0, 0, 0.4);
+	background: rgb(248, 247, 244);
+	border-radius: 5px;
+	box-shadow: 0px 20px 20px 0px rgba(0, 0, 0, 0.4);
 }
 
 .sub_menu li {
-		margin: 0;
-		padding: 9px 20px;
+	margin: 0;
+	padding: 9px 20px;
 }
 
 .sub_menu .sub_active, /* Выделение цветом активного элемента сабменю*/
@@ -228,9 +228,9 @@ a img {
 }
 
 .sub_menu li:first-child {
-		font-weight: 700;
+	font-weight: 700;
 
-		border-bottom: 1px solid #d1d0ce;
+	border-bottom: 1px solid #d1d0ce;
 }
 
 .sub_menu li:first-child:hover {
@@ -636,7 +636,7 @@ a img {
 }
 
 .remove { /* Крестик удалить товар */
- 	position: relative;
+	position: relative;
 	top: 0;
 	right: 0;
 
@@ -1086,15 +1086,15 @@ a img {
 }
 
 .introduction .introduction_list_1::before {
-	 background-position: -48px 0;
+	background-position: -48px 0;
 }
 
 .introduction .introduction_list_3::before {
-	 background-position: -96px 0;
+	background-position: -96px 0;
 }
 
 .introduction .introduction_list_4::before {
-	 background-position-x: -145px;
+	background-position-x: -145px;
 }
 
 .introduction .introduction_list_3,
@@ -1623,8 +1623,8 @@ textarea:focus:-ms-input-placeholder{
 	display: -ms-flexbox;
 	display: flex;
 	-webkit-box-align: center;
-	    -ms-flex-align: center;
-	        align-items: center;
+	-ms-flex-align: center;
+	align-items: center;
 
 	min-height: 100px;
 }
@@ -1847,8 +1847,8 @@ textarea:focus:-ms-input-placeholder{
 
 .filters_form select { /* Избавляемся от стандартной стрелки */
 	-webkit-appearance: none;
-	   -moz-appearance: none;
-	        appearance: none;
+	-moz-appearance: none;
+	appearance: none;
 
 	box-sizing: border-box;
 	width: 193px;

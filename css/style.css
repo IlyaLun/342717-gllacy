@@ -1625,6 +1625,8 @@ textarea:focus:-ms-input-placeholder{
 }
 
 .footer_social {
+	padding: 30px 0;
+
 	font-size: 13px;
 }
 
@@ -2093,7 +2095,7 @@ input[type="checkbox"]:disabled + label::before, /* Отключенный чб 
 input[type="checkbox"]:disabled + label:hover::before { 
 	width: 19px;
 	height: 19px;
-	
+
 	border: 1px solid rgba(248, 247, 244, 0.4);
 	cursor: default;
 }

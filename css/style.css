@@ -1272,6 +1272,7 @@ a img {
 
 .modal_feedback_show { /* Доп классы для JS */
 	display: block;
+	animation: bounce 0.6s;
 }
 
 .modal_overlay_show {
@@ -1388,6 +1389,14 @@ textarea:focus:-ms-input-placeholder{
 
 .modal_feedback .feedback_close::after {
 	transform: rotate(-45deg);
+}
+
+/* Анимация для формы */
+@keyframes bounce {
+	0% { transform: translateY(-2000px); }
+	70% { transform: translateY(30px); }
+	90% { transform: translateY(-10px); }
+	100% { transform: translateY(0px); }
 }
 
 .placehold { /* Общие стили для всех выносных placeholder */

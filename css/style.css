@@ -1575,13 +1575,17 @@ textarea:focus:-ms-input-placeholder{
 }
 
 .location_info .location_shedule {
+	margin: 0;
+	margin-bottom: 22px;
+	padding: 0;
+
 	line-height: 22px;
 }
 
 .feedback_btn {
-	width: 100%;
+	display: block;
 	margin-top: 23px;
-	padding: 10px 20px;
+	padding: 10px 25px;
 
 	font-family: "Roboto", "Arial", sans-serif;
 	font-weight: 700;
@@ -1590,6 +1594,7 @@ textarea:focus:-ms-input-placeholder{
 	color: #ffffff;
 	text-decoration: none;
 	text-shadow: 0 2px 5px rgba(160, 32, 11, 0.76);
+	vertical-align: top;
 
 	background: #f26843;
 	background: -moz-linear-gradient(top, #f26843 0%, #e74a35 100%);

@@ -884,7 +884,7 @@ a img {
 	display: flex;
 	justify-content: space-around;
 	flex-wrap: wrap;
-	align-items: top;
+	align-items: flex-start;
 
 	margin-bottom: -42px;
 }
